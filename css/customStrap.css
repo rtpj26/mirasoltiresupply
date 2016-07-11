@@ -1,0 +1,7 @@
+.id-border{
+	border-style: dashed;
+	border-width: 1px;
+	font-size: 75%;
+	width: 200px;
+	height: 200px;
+}
