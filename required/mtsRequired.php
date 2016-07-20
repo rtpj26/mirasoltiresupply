@@ -1,7 +1,5 @@
 <?php 
-
 	session_start(); 
-	$_SESSION['user']['id'] = 1;
 ?>
 <link rel="stylesheet" type="text/css" href="/mirasoltiresupply/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="/mirasoltiresupply/css/normalize.css">
