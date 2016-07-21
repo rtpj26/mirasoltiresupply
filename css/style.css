@@ -28,6 +28,7 @@ html, body {
 .si_button{border: none;color: #fff;outline: none;background-color: transparent;margin-left: 18px;}
 .si_button_2{border: none;color: #999;outline: none;background-color: transparent;margin-left: 18px;}
 .title{font-size:400%;letter-spacing: 10px;}
+.product_title{font-size:400%; text-align: right;}
 
 
 /*ids*/

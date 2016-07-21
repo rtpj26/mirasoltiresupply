@@ -18,10 +18,18 @@ class Account{
 	}
 
 	public static function addAccount($fname, $lname, $email, $phone, $pass){
-		$pdo_1 = self::$pdo->prepare("INSERT INTO `USERS` VALUES(NULL, :fname, :lname, , '', :email, :pass, '', '', :phone, '1')");
+		$pdo_1 = self::$pdo->prepare("INSERT INTO `users` VALUES(NULL, :fname, :lname, '', :email, :pass, '', '', :phone, '2')");
 		$pdo_1->execute(array(':fname'=>$fname, ':lname'=>$lname, ':email'=>$email, ':pass'=>$pass, ':phone'=>$phone));
 		$result = $pdo_1->fetchAll(PDO::FETCH_ASSOC);
-		if($result) return true;
+		if($result) return false;
+		else return true;
+	}
+
+	public static function findAccount($email, $pass){
+		$pdo_1 = self::$pdo->prepare("SELECT * FROM `users` WHERE USER_EMAIL=:email AND USER_PASSWORD=:pass");
+		$pdo_1->execute(array(':email'=>$email, ':pass'=>$pass));
+		$result = $pdo_1->fetchAll(PDO::FETCH_ASSOC);
+		if($result) return $result;
 		else return false;
 	}
 }
