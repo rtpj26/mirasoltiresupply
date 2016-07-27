@@ -1,7 +1,11 @@
 /*Global*/
+*{
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+}
 html, body {
   height: 100%;
 }
+
 
 /*Classes*/
 .page-wrap {min-height: 100%;margin-bottom: -65px;}
@@ -28,9 +32,12 @@ html, body {
 .si_button{border: none;color: #fff;outline: none;background-color: transparent;margin-left: 18px;}
 .si_button_2{border: none;color: #999;outline: none;background-color: transparent;margin-left: 18px;}
 .title{font-size:400%;letter-spacing: 10px;}
-.product_title{font-size:400%; text-align: right;}
-
-
+.product_title{font-size:400%; text-align: right; color:#fff;}
+.sidebar-font{color:#fff;}
+.sidebar-font-white{color:#000;}
+.hr-red{background-color: #cc3433; color: #cc3433; height:1px;}
+.tire-enum-item{background-color: #fff; color: #000; float:left; width:100%; height: 100px; opacity:0.9;margin-bottom:2px;}
+.logo{top:20px;left:90px; position:absolute;z-index: 999999;  }
 /*ids*/
 #home{background-image: url('../assets/4acctabloggein_599p.jpg');height:635px;}
 #navigation_row a{color: #000;}
@@ -59,3 +66,18 @@ html, body {
 #footer, #footer a{background-color: #666; color: #ccc;}
 #footer{position: fixed; bottom:0px; left:0px; display:inline;width:100%;margin-top:70px;} 
 #footer li{list-style: none;display:inline-block;padding-top:5px;}
+#batteries{background-image: url('/mirasoltiresupply/assets/bat29soo99.jpg'); background-repeat: no-repeat; position: absolute; top:0px; bottom:0px; height:100%; width: 100%; overflow: hidden; z-index: -99999}
+#batt_enum{background-color: #fff; color: #000; float:left; width:78%; height: 400px; opacity:0.9;}
+#sidebar{width:15%; float:left; background-color: #cc3333; margin-right:10px;padding:10px;height:400px;}
+#sidebar > h1{color: #fff;}
+#sidebar > input{width: 115%; margin-left: -11px;padding-top:10px; padding-bottom: 10px;}
+#sidebar-white{width:20%; float:left; background-color: #fff; margin-right:10px;padding:10px;height:400px;color:#000;}
+#sidebar-white > h1{color: #000;}
+#sidebar-white > input{width: 115%; margin-left: -15px;padding-top:10px; padding-bottom: 10px;background-color: #cc3433; color:#fff;border-style:none;}
+#prod-batt{overflow: hidden;}
+#filters{list-style: none; color: #fff; font-size: 125%;}
+#filters-white{list-style: none; color: #000; font-size: 125%;}
+#filters-white li, #filters li{margin-left:-10px;}
+#tires{background-image: url('/mirasoltiresupply/assets/tir10o83r8s.jpg'); background-repeat: no-repeat; position: absolute; top:0px; bottom:0px; height:100%; width: 100%; overflow: hidden; z-index: -99999}
+#tire_enum{float:left; width:78%; height: 400px; opacity:0.9;}
+#wheels{background-image: url('/mirasoltiresupply/assets/whe219dah.jpg'); background-repeat: no-repeat; position: absolute; top:0px; bottom:0px; height:100%; width: 100%; overflow: hidden; z-index: -99999}

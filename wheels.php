@@ -9,31 +9,27 @@
 	<body>
 		<div id="navigation_row"></div>
 		<div class="logo"><img src="assets/logo.jpg" /></div>
-		<div id="tires"></div>
-		<div class="page-wrap container"  id="prod-tire">
+		<div id="wheels"></div>
+		<div class="page-wrap container"  id="prod-wheel">
 			<div>
 				<div></div>
 				<div>
-					<h1 class="product_title">TIRES</h1>
-					<div id="sidebar-white">
+					<h1 class="product_title">WHEELS</h1>
+					<div id="sidebar">
 						<h1 class="text-center">SEARCH</h1>
-						<input type="text" name="keyword" id="keyword" class="text-center keyword-red"/>
+						<input type="text" name="keyword" id="keyword" class="text-center"/>
 						<br /><br />
-						<h4 class="sidebar-font-white text-center">Filter By:</h4>
+						<h4 class="sidebar-font text-center">Filter By:</h4>
 						<hr class="hr-red">
-						<ul id="filters-white">
+						<ul id="filters">
 							<li>By Brand</li>
+							<li>By Hose</li>
 							<li>By Size</li>
-							<li>By Design</li>
-							<li>By Manufacturer</li>
+							
 						</ul>
 					</div>
-					<div id="tire_enum">
-						<div class="tire-enum-item"></div>
-						<div class="tire-enum-item"></div>
-						<div class="tire-enum-item"></div>
-						<div class="tire-enum-item"></div>
-					</div>
+					<div id="batt_enum"></div>
+
 				</div>
 			</div>
 		</div>

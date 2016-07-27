@@ -43,6 +43,10 @@ $(function(){
 				pass: $('#pass').val(),
 				type: "account_control",
 				action: "signup",
+			},success: function(){
+				alert('New User Added');
+			},error: function(){
+				alert('Cannot Add New User')
 			}
 		});
 	}
