@@ -20,6 +20,7 @@ $(function(){
 				if(element['logged_in'] == true){
 					$("#logout").css("display", "block");
 		  			$("#account").text("My Account");
+		  			$('#account').attr("href", "/mirasoltiresupply/myaccount.php");
 				}else{
 					$('#logout').css("display", "none");
 				}
