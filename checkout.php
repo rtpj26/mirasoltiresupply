@@ -19,7 +19,34 @@
 					<span id="sign-in-email"></span>
 					<span id="collapse-profile">+</span>
 				</div>
-				<div id="profile-div" class="collapse"></div>
+				<div id="profile-div" class="collapse">
+					<div class="top-bottom-red-border">
+						<label class="padded-right-30">ACCOUNT ID</label>
+						<label id="account-id" class="checkout-data">1001</label>
+					</div>
+					<div class="bottom-red-border">
+						<label class="padded-right-30">NAME</label>
+						<label id="account-lname" class="checkout-data">GERONAGA</label>
+						<label id="account-fname" class="checkout-data">| NICOLE</label>
+						<label id="account-mname" class="checkout-data">| B</label>
+					</div>
+					<div class="bottom-red-border">
+						<label class="padded-right-30">ADDRESS</label>
+						<label id="account-address" class="checkout-data">GREENSVILLE 1, KAPPA ST. BACOLOD CITY</label>
+					</div>
+					<div class="bottom-red-border">
+						<label class="padded-right-30">EMAIL</label>
+						<label id="account-email" class="checkout-data">nicolegeronaga@gmail.com</label>
+					</div>
+					<div class="bottom-red-border">
+						<label class="padded-right-30">GENDER</label>
+						<label id="account-gender" class="checkout-data">FEMALE</label>
+					</div>
+					<div class="bottom-red-border">
+						<label class="padded-right-30">CONTACT NUMBER</label>
+						<label id="account-contact" class="checkout-data">09171234567</label>
+					</div>
+				</div>
 				
 				<div class="collapse-title" data-toggle="collapse" href="#delivery-div" id="delivery-title">
 					<span class="glyphicon glyphicon-pushpin"></span>
@@ -31,7 +58,9 @@
 						<p id="deliver-to">User</p>
 						<p id="deliver-address"><span class="glyphicon glyphicon-pushpin"></span> here</p>
 					</div>
-					<button>Save and Continue</button>
+					<div class="text-center">
+						<button class="checkout-button">Save and Continue</button>
+					</div>
 				</div>
 
 				<div class="collapse-title" data-toggle="collapse" href="#payment-div" id="payment-title">
