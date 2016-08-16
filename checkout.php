@@ -15,8 +15,8 @@
 				<div class="collapse-title" data-toggle="collapse" href="#profile-div" id="profile-title">
 					<span class="glyphicon glyphicon-lock"></span>
 					<span id="sign-in-label">SIGNED IN AS</span>
-					<span id="sign-in-fname"></span>
-					<span id="sign-in-email"></span>
+					<span id="sign-in-fname">NICOLE</span>
+					<span id="sign-in-email">nicolegeronaga@gmail.com</span>
 					<span id="collapse-profile">+</span>
 				</div>
 				<div id="profile-div" class="collapse">

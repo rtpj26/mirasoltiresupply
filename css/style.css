@@ -8,88 +8,479 @@ html, body {
 
 
 /*Classes*/
-.page-wrap {min-height: 100%;margin-bottom: -65px;}
-.page-wrap:after {display: block;}
-.site-footer, .page-wrap:after{height: 65px;}
-.link{margin-left:40px;}
-.sdlink > a, .sulink > a{text-decoration: none;}
-.md20{margin-top:20px;}
-.lfloat{float:left;}
-.rfloat{float:right;}
-.indent5pr{text-indent: 5px;}
-.padd5pl{padding-left:5px;}
-.custom_input_f{border-top-style: solid;border-bottom-style: solid;border-width: 0px;
-	border-top-width: 1px;border-bottom-width: 1px;padding:20px;color: #993333;
-	outline: none;}
-.custom_input{border-bottom-style: solid;border-width: 0px;	border-bottom-width: 1px;padding:20px;
-	color: #993333;border-color: #660000;outline: none;}
-.custom_input_2{border-bottom-style: solid;border-width: 0px;border-bottom-width: 1px;padding:20px;
-	color: #999999;border-color: #666666;outline: none;}
-.custom_input_3{border-bottom-style: solid;border-width: 0px;border-bottom-width: 1px;
-	padding:20px;color: #fff;border-color: #666666;outline: none;background-color: #000;}
-.cu_button{border: none;color: #993333;outline: none;background-color: transparent;margin-left: 18px;}
-.reg_button{border: none;color: #000;outline: none;background-color: transparent;margin-left: 18px;}
-.si_button{border: none;color: #fff;outline: none;background-color: transparent;margin-left: 18px;}
-.si_button_2{border: none;color: #999;outline: none;background-color: transparent;margin-left: 18px;}
-.title{font-size:400%;letter-spacing: 10px;}
-.product_title{font-size:400%; text-align: right; color:#fff;}
-.sidebar-font{color:#fff;}
-.sidebar-font-white{color:#000;}
-.hr-red{background-color: #cc3433; color: #cc3433; height:1px;}
-.tire-enum-item{background-color: #fff; color: #000; float:left; width:100%; height: 100px; opacity:0.9;margin-bottom:2px;}
-.logo{top:20px;left:90px; position:absolute;z-index: 999999;  }
-.collapse-title{background-color: #d40e1d; color: #fff; padding:10px;margin-bottom:5px;}
-.box{border-style:solid;border-width:1px; border-color: #ff0000;padding:10px;width:209px; margin-left: 40%;}
-.padded-right-30{padding-right:30px;width:156px;}
-.top-bottom-red-border{border-style: solid; border-width:0px; border-top-width:1px; border-bottom-width:1px; border-color: #ff0000;padding:5px;}
-.bottom-red-border{border-style: solid; border-width:0px; border-bottom-width:1px; border-color: #ff0000;padding:5px;}
-.checkout-data{color:#ff0000;margin-right:50px;}
-.checkout-button{background-color: #d40e1d;; border-width: 0px; color: #fff; padding: 10px; padding-left: 40px; padding-right: 40px; margin:5px;}
+.page-wrap {
+	min-height: 100%;
+	margin-bottom: -65px;
+}
+
+.page-wrap:after {
+	display: block;
+}
+
+.site-footer, .page-wrap:after{
+	height: 65px;
+}
+
+.link{
+	margin-left:40px;
+}
+
+.sdlink > a, .sulink > a{
+	text-decoration: none;
+}
+
+.md20{
+	margin-top:20px;
+}
+
+.lfloat{
+	float:left;
+}
+
+.rfloat{
+	float:right;
+}
+
+.indent5pr{
+	text-indent: 5px;
+}
+
+.padd5pl{
+	padding-left:5px;
+}
+
+.custom_input_f{
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-width: 0px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	padding:20px;
+	color: #993333;
+	outline: none;
+}
+
+.custom_input{
+	border-bottom-style: solid;
+	border-width: 0px;	
+	border-bottom-width: 1px;
+	padding:20px;
+	color: #993333;
+	border-color: #660000;
+	outline: none;
+}
+
+.custom_input_2{
+	border-bottom-style: solid;
+	border-width: 0px;
+	border-bottom-width: 1px;
+	padding:20px;
+	color: #999999;
+	border-color: #666666;
+	outline: none;
+}
+
+.custom_input_3{
+	border-bottom-style: solid;
+	border-width: 0px;
+	border-bottom-width: 1px;
+	padding:20px;
+	color: #fff;
+	border-color: #666666;
+	outline: none;
+	background-color: #000;
+}
+
+.cu_button{
+	border: none;
+	color: #993333;
+	outline: none;
+	background-color: transparent;
+	margin-left: 18px;
+}
+
+.reg_button{
+	border: none;
+	color: #000;
+	outline: none;
+	background-color: transparent;
+	margin-left: 18px;
+}
+
+.si_button{
+	border: none;
+	color: #fff;
+	outline: none;
+	background-color: transparent;
+	margin-left: 18px;
+}
+
+.si_button_2{
+	border: none;
+	color: #999;
+	outline: none;
+	background-color: transparent;
+	margin-left: 18px;
+}
+
+.title{
+	font-size:400%;
+	letter-spacing: 10px;
+}
+
+.product_title{
+	font-size:400%; 
+	text-align: right; 
+	color:#fff;
+}
+
+.sidebar-font{
+	color:#fff;
+}
+
+.sidebar-font-white{
+	color:#000;
+}
+
+.hr-red{
+	background-color: #cc3433; 
+	color: #cc3433; 
+	height:1px;
+}
+
+.tire-enum-item{
+	background-color: #fff; 
+	color: #000; 
+	float:left; 
+	width:100%; 
+	height: 100px;
+	opacity:0.9;
+	margin-bottom:2px;
+}
+
+.logo{
+	top:20px;
+	left:90px; 
+	position:absolute;
+	z-index: 999999;  
+}
+
+.collapse-title{
+	background-color: #d40e1d; 
+	color: #fff; 
+	padding:10px;
+	margin-bottom:5px;
+	width:1050px;
+}
+
+.box{
+	border-style:solid;
+	border-width:1px; 
+	border-color: #ff0000;
+	padding:10px;
+	width:209px; 
+	margin-left: 40%;
+}
+
+.padded-right-30{
+	padding-right:30px;
+	width:156px;
+}
+
+.top-bottom-red-border{
+	border-style: solid; 
+	border-width:0px; 
+	border-top-width:1px; 
+	border-bottom-width:1px; 
+	border-color: #ff0000;
+	padding:5px;
+}
+
+.bottom-red-border{
+	border-style: solid; 
+	border-width:0px; 
+	border-bottom-width:1px; 
+	border-color: #ff0000;
+	padding:5px;
+}
+
+.checkout-data{
+	color:#ff0000;
+	margin-right:50px;
+}
+
+.checkout-button{
+	background-color: #d40e1d; 
+	border-width: 0px; 
+	color: #fff; 
+	padding: 10px; 
+	padding-left: 40px; 
+	padding-right: 40px; 
+	margin:5px;
+}
+
 /*ids*/
-#home{background-image: url('../assets/4acctabloggein_599p.jpg');height:635px;}
-#navigation_row a{color: #000;}
-#au_link{position: absolute;bottom: 0px;left:85px;}
-#about_us{background-image: url('/mirasoltiresupply/assets/bg_rnr.png');width:100%;
-	height:100%;color:#fff;}
-#nr_link_u{padding-top:20px;color: #000;}
-#aboutus_content{border-style:solid;border-width:1px;border-color: #fff;
-	margin-left:150px;margin-right:150px;margin-top:30px;}
-#aboutus_content > p{text-align: justify;margin-left: 150px;margin-right: 150px;
-	margin-top: 50px;padding-bottom: 150px;}
-#aboutus_content > center{padding-top: 100px;}
-#contact_us{background-image: url('/mirasoltiresupply/assets/cu_1.jpg');width:100%;
-	height:100%;padding-top:-20px;}
-#cu_link{margin-top:30px;}
-#contact_us_content{margin-left:150px;margin-right:150px;padding-top:50px;}
-#loc_link{margin-top:90px;}
-#location{background-color: #666666;width:100%;height:100%;padding-top:20px;}
-#location_content{margin-left:150px;margin-right:150px;padding-top:50px;color: #fff;
-	padding-top:-20px;}
-#logout{display:none;}
-#registration_form{position: absolute;margin-left: 220px;margin-top: 35px;}
-#sign_in, #sign_up{float: left;}
-#sign_in{background-color: #000;color: #fff;width:366.27px; height:504.23px;}
-#sign_up{margin-left:5px;color: #000;}
-#footer, #footer a{background-color: #666; color: #ccc;}
-#footer{position: fixed; bottom:0px; left:0px; display:inline;width:100%;margin-top:70px;} 
-#footer li{list-style: none;display:inline-block;padding-top:5px;}
-#batteries{background-image: url('/mirasoltiresupply/assets/bat29soo99.jpg'); background-repeat: no-repeat; position: absolute; top:0px; bottom:0px; height:100%; width: 100%; overflow: hidden; z-index: -99999}
-#batt_enum{background-color: #fff; color: #000; float:left; width:78%; height: 400px; opacity:0.9;}
-#sidebar{width:15%; float:left; background-color: #cc3333; margin-right:10px;padding:10px;height:400px;}
-#sidebar > h1{color: #fff;}
-#sidebar > input{width: 115%; margin-left: -11px;padding-top:10px; padding-bottom: 10px;}
-#sidebar-white{width:20%; float:left; background-color: #fff; margin-right:10px;padding:10px;height:400px;color:#000;}
-#sidebar-white > h1{color: #000;}
-#sidebar-white > input{width: 115%; margin-left: -15px;padding-top:10px; padding-bottom: 10px;background-color: #cc3433; color:#fff;border-style:none;}
-#prod-batt{overflow: hidden;}
-#filters{list-style: none; color: #fff; font-size: 125%;}
-#filters-white{list-style: none; color: #000; font-size: 125%;}
-#filters-white li, #filters li{margin-left:-10px;}
-#tires{background-image: url('/mirasoltiresupply/assets/tir10o83r8s.jpg'); background-repeat: no-repeat; position: absolute; top:0px; bottom:0px; height:100%; width: 100%; overflow: hidden; z-index: -99999}
-#tire_enum{float:left; width:78%; height: 400px; opacity:0.9;}
-#wheels{background-image: url('/mirasoltiresupply/assets/whe219dah.jpg'); background-repeat: no-repeat; position: absolute; top:0px; bottom:0px; height:100%; width: 100%; overflow: hidden; z-index: -99999}
-#sign-in-fname{margin-left:80px;}
-#sign-in-email{margin-left:30px;}
-#sign-in-label{margin-left:50px;}
-#collapse-profile{float:right;}
-#account-wrapper{margin-top:80px;}
+#home{
+	background-image: url('../assets/4acctabloggein_599p.jpg');
+	height:635px;
+}
+
+#navigation_row a{
+	color: #000;
+}
+
+#au_link{
+	position: absolute;
+	bottom: 0px;
+	left:85px;
+}
+
+#about_us{
+	background-image: url('/mirasoltiresupply/assets/bg_rnr.png');
+	width:100%;
+	height:100%;
+	color:#fff;
+}
+
+#nr_link_u{
+	padding-top:20px;
+	color: #000;
+}
+
+#aboutus_content{
+	border-style:solid;
+	border-width:1px;
+	border-color: #fff;
+	margin-left:150px;
+	margin-right:150px;
+	margin-top:30px;
+}
+
+#aboutus_content > p{
+	text-align: justify;
+	margin-left: 150px;
+	margin-right: 150px;
+	margin-top: 50px;
+	padding-bottom: 150px;
+}
+#aboutus_content > center{
+	padding-top: 100px;
+}
+
+#contact_us{
+	background-image: url('/mirasoltiresupply/assets/cu_1.jpg');
+	width:100%;
+	height:100%;
+	padding-top:-20px;
+}
+
+#cu_link{
+	margin-top:30px;
+}
+
+#contact_us_content{
+	margin-left:150px;
+	margin-right:150px;
+	padding-top:50px;
+}
+
+#loc_link{
+	margin-top:90px;
+}
+
+#location{
+	background-color: #666666;
+	width:100%;
+	height:100%;
+	padding-top:20px;
+}
+
+#location_content{
+	margin-left:150px;
+	margin-right:150px;
+	padding-top:50px;
+	color: #fff;
+	padding-top:-20px;
+}
+
+#logout{
+	display:none;
+}
+
+#registration_form{
+	position: absolute;
+	margin-left: 220px;
+	margin-top: 35px;
+}
+
+#sign_in, #sign_up{
+	float: left;
+}
+
+#sign_in{
+	background-color: #000;
+	color: #fff;
+	width:366.27px; 
+	height:504.23px;
+}
+
+#sign_up{
+	margin-left:5px;
+	color: #000;
+}
+
+#footer, #footer a{
+	background-color: #666; 
+	color: #ccc;
+}
+
+#footer{
+	position: fixed; 
+	bottom:0px; 
+	left:0px; 
+	display:inline;
+	width:100%;
+	margin-top:70px;
+}
+
+#footer li{
+	list-style: none;
+	display:inline-block;
+	padding-top:5px;
+}
+
+#batteries{
+	background-image: url('/mirasoltiresupply/assets/bat29soo99.jpg'); 
+	background-repeat: no-repeat; 
+	position: absolute; 
+	top:0px; 
+	bottom:0px; 
+	height:100%; 
+	width: 100%; 
+	overflow: hidden; 
+	z-index: -99999;
+}
+
+#batt_enum{
+	background-color: #fff; 
+	color: #000; 
+	float:left; 
+	width:78%; 
+	height: 400px; 
+	opacity:0.9;
+}
+
+#sidebar{
+	width:15%; 
+	float:left; 
+	background-color: #cc3333; 
+	margin-right:10px;
+	padding:10px;
+	height:400px;
+}
+
+#sidebar > h1{
+	color: #fff;
+}
+
+#sidebar > input{
+	width: 115%; 
+	margin-left: -11px;
+	padding-top:10px; 
+	padding-bottom: 10px;
+}
+
+#sidebar-white{
+	width:20%; 
+	float:left; 
+	background-color: #fff; 
+	margin-right:10px;
+	padding:10px;
+	height:400px;
+	color:#000;
+}
+
+#sidebar-white > h1{
+	color: #000;
+}
+
+#sidebar-white > input{
+	width: 115%; 
+	margin-left: -15px;
+	padding-top:10px; 
+	padding-bottom: 10px;
+	background-color: #cc3433; 
+	color:#fff;
+	border-style:none;
+}
+
+#prod-batt{
+	overflow: hidden;
+}
+
+#filters{
+	list-style: none; 
+	color: #fff; 
+	font-size: 125%;
+}
+
+#filters-white{
+	list-style: none; 
+	color: #000; 
+	font-size: 125%;
+}
+
+#filters-white li, #filters li{
+	margin-left:-10px;
+}
+
+#tires{
+	background-image: url('/mirasoltiresupply/assets/tir10o83r8s.jpg'); 
+	background-repeat: no-repeat; 
+	position: absolute; 
+	top:0px; 
+	bottom:0px; 
+	height:100%; 
+	width: 100%; 
+	overflow: hidden; 
+	z-index: -99999
+}
+
+#tire_enum{
+	float:left; 
+	width:78%; 
+	height: 400px; 
+	opacity:0.9;
+}
+
+#wheels{
+	background-image: url('/mirasoltiresupply/assets/whe219dah.jpg'); 
+	background-repeat: no-repeat; 
+	position: absolute; 
+	top:0px; 
+	bottom:0px; 
+	height:100%; 
+	width: 100%; 
+	overflow: hidden; 
+	z-index: -99999;
+}
+
+#sign-in-fname{
+	margin-left:80px;
+}
+
+#sign-in-email{
+	margin-left:30px;
+}
+
+#sign-in-label{
+	margin-left:50px;
+}
+
+#collapse-profile{
+	float:right;
+}
+
+#account-wrapper{
+	margin-top:80px;
+}

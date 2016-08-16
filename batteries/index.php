@@ -4,11 +4,11 @@
 		<meta charset="utf-8">
    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<?php require('required/mtsRequired.php'); ?>
+		<?php require('../required/mtsRequired.php'); ?>
 	</head>
 	<body>
 		<div id="navigation_row"></div>
-		<div class="logo"><img src="assets/logo.jpg" /></div>
+		<div class="logo"><img src="../assets/logo.jpg" /></div>
 		<div id="batteries"></div>
 		<div class="page-wrap container"  id="prod-batt">
 			<div>
