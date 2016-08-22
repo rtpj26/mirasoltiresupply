@@ -5,16 +5,18 @@
 	include_once('../classes/Account.class.php');
 	
 	$method = $_SERVER['REQUEST_METHOD'];
-
 	if($method == "POST"){
 		$a = $_POST['action'];
 		$t = $_POST['type'];
 
 		if($t == 'account_control'){
 			if($a == 'checkSessionLoggedIn'){
-				if($_SESSION['users'][0]['USER_ID'] > 0) die(json_encode(array("success"=>true,"logged_in"=>true)));
-				else if($_SESSION['users'][0]['USER_ID'] > 0) die(json_encode(array("success"=>true,"logged_in"=>false)));
-				else die(json_encode(array("success"=>false)));
+				if(isset($_SESSION['users'])){
+					if($_SESSION['users'][0]['USER_ID'] > 0) die(json_encode(array("success"=>true,"logged_in"=>true, "u_details"=>$_SESSION['users'])));
+				}
+				//else if($_SESSION['users'][0]['USER_ID'] <= 0) die(json_encode(array("success"=>true,"logged_in"=>false)));
+				else die(json_encode(array("logged_in"=>false)));
+				//else die(json_encode(array("success"=>false)));
 			}else if($a == 'signup'){
 				$details = Account::findAccount($_POST['email'], $_POST['pass']);
 				if($details){
@@ -29,7 +31,7 @@
 				$details = Account::findAccount($_POST['semail'], $_POST['spass']);
 				if($details){
 					$_SESSION['users'] = $details;
-					die(json_encode(array('success'=>true)));
+					die(json_encode(array('success'=>true, 'u_data'=>$details)));
 				}else die(json_encode(array('success'=>false)));
 			}
 		}

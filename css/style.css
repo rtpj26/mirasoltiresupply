@@ -478,7 +478,7 @@ html, body {
 }
 
 #collapse-profile{
-	float:right;
+	float:right !important;
 }
 
 #account-wrapper{

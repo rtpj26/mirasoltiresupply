@@ -5,6 +5,8 @@
    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<?php require('required/mtsRequired.php'); ?>
+		<script language="javascript" type="text/javascript" src="/mirasoltiresupply/js/checkout.js"></script>
+
 	</head>
 	<body>
 		<div style="height: 30px;"></div>
