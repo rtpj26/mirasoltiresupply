@@ -53,6 +53,15 @@
 					die(json_encode(array('success'=>true, 'productDetails' => $result)));
 				}
 			}
+			else if($a == 'getBatteries'){
+				if(isset($_POST['sortby'])){
+					$result = Product::getBatteries($_POST['sortby']);
+					die(json_encode(array('success'=>true, 'productDetails' => $result)));
+				}else{
+					$result = Product::getBatteries("");
+					die(json_encode(array('success'=>true, 'productDetails' => $result)));
+				}
+			}
 		}
 	}
 	if($method == "GET"){
