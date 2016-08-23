@@ -29,5 +29,17 @@ class Product{
 		return $result;
 	}
 
+	public static function getWheels($sortBy){
+		if($sortBy == ""){
+			$pdo_1 = self::$pdo->prepare("SELECT * FROM WHEEL A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 2");
+			$pdo_1->execute();
+		}else{
+			$pdo_1 = self::$pdo->prepare("SELECT * FROM WHEEL A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 2 ORDER BY :sortby");
+			$pdo_1->execute(array(":sortby" => $sortBy));
+		}
+		$result = $pdo_1->fetchAll(PDO::FETCH_ASSOC);
+		return $result;
+	}
+
 }
 ?>

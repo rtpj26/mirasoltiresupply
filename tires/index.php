@@ -24,10 +24,10 @@
 						<h4 class="sidebar-font-white text-center">Filter By:</h4>
 						<hr class="hr-red">
 						<ul id="filters-white">
-							<li>By Brand</li>
-							<li>By Size</li>
-							<li>By Design</li>
-							<li>By Manufacturer</li>
+							<li><a href="#" id="byBrand" class="sort">By Brand</a></li>
+							<li><a href="#" id="bySize" class="sort">By Size</a></li>
+							<li><a href="#" id="byDesign" class="sort">By Design</a></li>
+							<li><a href="#" id="byManufacturer" class="sort">By Manufacturer</a></li>
 						</ul>
 					</div>
 					<div id="tire_enum">

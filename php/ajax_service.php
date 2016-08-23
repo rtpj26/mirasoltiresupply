@@ -44,6 +44,14 @@
 					$result = Product::getTires("");
 					die(json_encode(array('success'=>true, 'productDetails' => $result)));
 				}
+			}else if($a == 'getWheels'){
+				if(isset($_POST['sortby'])){
+					$result = Product::getWheels($_POST['sortby']);
+					die(json_encode(array('success'=>true, 'productDetails' => $result)));
+				}else{
+					$result = Product::getWheels("");
+					die(json_encode(array('success'=>true, 'productDetails' => $result)));
+				}
 			}
 		}
 	}
