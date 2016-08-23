@@ -1,0 +1,45 @@
+.link a{
+	color:#fff;
+}
+
+.sublink{
+	color: #000;
+}
+
+#tire_enum{
+	float:left; 
+	width:78%; 
+	height: 400px; 
+	opacity:0.9;
+	margin-left:10px;
+}
+
+.tire-enum-item{
+	background-color: #fff; 
+	color: #000; 
+	float:left; 
+	width:100%; 
+	height: 100px;
+	opacity:0.9;
+	margin-bottom:2px;
+}
+
+.tire-name{
+	color:#ff0000;
+	font-size:125%;
+}
+
+.details{
+	font-size:70%;
+	margin-top:-1px;
+}
+
+.addToCart{
+	float: right;
+    border-style: none;
+    padding: 10px 20px 10px 20px;
+    color: #fff;
+    background-color: #ff0000;
+    margin-top: -20px;
+    opacity: 1.0;
+}

@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<div id="navigation_row"></div>
-		<div class="logo"><img src="assets/logo.jpg" /></div>
+		<div class="logo"><img src="/mirasoltiresupply/assets/logo_altered.png" /></div>
 		<div id="wheels"></div>
 		<div class="page-wrap container"  id="prod-wheel">
 			<div>
@@ -35,4 +35,14 @@
 		</div>
 		<!--<div id="footer" class="site-footer"></div>-->
 	</body>
+	<!--Override-->
+	<style> 
+			.link a{
+				color:#fff;
+			}
+
+			.sublink{
+				color: #000;
+			}
+		</style>
 </html>

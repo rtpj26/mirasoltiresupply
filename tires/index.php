@@ -5,10 +5,12 @@
    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<?php require('../required/mtsRequired.php'); ?>
+		<link rel="stylesheet" type="text/css" href="/mirasoltiresupply/tires/css/tires.css">
+		<script language="javascript" type="text/javascript" src="/mirasoltiresupply/tires/js/tires.js"></script>
 	</head>
 	<body>
 		<div id="navigation_row"></div>
-		<div class="logo"><img src="../assets/logo.jpg" /></div>
+		<div class="logo"><img src="/mirasoltiresupply/assets/logo_altered.png" /></div>
 		<div id="tires"></div>
 		<div class="page-wrap container"  id="prod-tire">
 			<div>
@@ -22,21 +24,21 @@
 						<h4 class="sidebar-font-white text-center">Filter By:</h4>
 						<hr class="hr-red">
 						<ul id="filters-white">
-							<li id="b-brand">By Brand</li>
-							<li id="b-size">By Size</li>
-							<li id="b-design">By Design</li>
-							<li id="b-manufacturer">By Manufacturer</li>
+							<li>By Brand</li>
+							<li>By Size</li>
+							<li>By Design</li>
+							<li>By Manufacturer</li>
 						</ul>
 					</div>
 					<div id="tire_enum">
-						<div class="tire-enum-item"></div>
-						<div class="tire-enum-item"></div>
-						<div class="tire-enum-item"></div>
-						<div class="tire-enum-item"></div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!--<div id="footer" class="site-footer"></div>-->
+
 	</body>
 </html>
+
+
+

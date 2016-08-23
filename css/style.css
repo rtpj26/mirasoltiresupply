@@ -148,16 +148,6 @@ html, body {
 	height:1px;
 }
 
-.tire-enum-item{
-	background-color: #fff; 
-	color: #000; 
-	float:left; 
-	width:100%; 
-	height: 100px;
-	opacity:0.9;
-	margin-bottom:2px;
-}
-
 .logo{
 	top:20px;
 	left:90px; 
@@ -223,10 +213,6 @@ html, body {
 #home{
 	background-image: url('../assets/4acctabloggein_599p.jpg');
 	height:635px;
-}
-
-#navigation_row a{
-	color: #000;
 }
 
 #au_link{
@@ -444,13 +430,6 @@ html, body {
 	width: 100%; 
 	overflow: hidden; 
 	z-index: -99999
-}
-
-#tire_enum{
-	float:left; 
-	width:78%; 
-	height: 400px; 
-	opacity:0.9;
 }
 
 #wheels{

@@ -3,7 +3,7 @@ $(function(){
 	var ajaxURL = "/mirasoltiresupply/php/ajax_service.php";
 
 	/**************Event Handlers***************/
-	$('#navigation_row').load('navigation.php');
+	$('#navigation_row').load('/mirasoltiresupply/navigation.php');
 	//$('#footer').load('footer.php');
 	checklogin();
 
@@ -20,7 +20,7 @@ $(function(){
 				if(element['logged_in'] == true){
 					$("#logout").css("display", "block");
 		  			$("#account").text("My Account");
-		  			$('#account').attr("href", "/mirasoltiresupply/myaccount.php");
+		  			$('#account').attr("href", "/mirasoltiresupply/account/index.php");
 				}else{
 					$('#logout').css("display", "none");
 				}

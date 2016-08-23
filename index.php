@@ -117,4 +117,9 @@
 		</div>
 		<div id="footer"></div>
 	</body>
+	<style> 
+			.link a, .sublink{
+				color:#000;
+			}
+		</style>
 </html>

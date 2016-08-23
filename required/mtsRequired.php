@@ -10,4 +10,3 @@
 <script language="javascript" type="text/javascript" src="/mirasoltiresupply/js/jquery.js"></script>
 <script language="javascript" type="text/javascript" src="/mirasoltiresupply/js/bootstrap.min.js"></script>
 <script language="javascript" type="text/javascript" src="/mirasoltiresupply/js/content.js"></script>
-

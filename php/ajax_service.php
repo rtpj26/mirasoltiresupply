@@ -3,7 +3,8 @@
 	header('Content-type: application/json');
 
 	include_once('../classes/Account.class.php');
-	
+	include_once('../classes/Product.class.php');
+
 	$method = $_SERVER['REQUEST_METHOD'];
 	if($method == "POST"){
 		$a = $_POST['action'];
@@ -33,6 +34,16 @@
 					$_SESSION['users'] = $details;
 					die(json_encode(array('success'=>true, 'u_data'=>$details)));
 				}else die(json_encode(array('success'=>false)));
+			}
+		}elseif($t == 'product'){
+			if($a == 'getTires'){
+				if(isset($_POST['sortby'])){
+					$result = Product::getTires($_POST['sortby']);
+					die(json_encode(array('success'=>true, 'productDetails' => $result)));
+				}else{
+					$result = Product::getTires("");
+					die(json_encode(array('success'=>true, 'productDetails' => $result)));
+				}
 			}
 		}
 	}
