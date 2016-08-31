@@ -1,10 +1,23 @@
 @todo
 
 batteries item
-pagination
+--pagination
 
 transaction
 edit profile
 checkout
 
+admin page
+
+sign in in checkout
+
 mobile
+
+
+Changes in Design:
+Remove Pagination - replace with scroll
+
+
+Bugs:
+images not stretching for different aspect ratio and resolution
+About Us direct link not centered

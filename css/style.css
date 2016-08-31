@@ -7,6 +7,11 @@ html, body {
 }
 
 
+.navbar-right{
+	font-size:150%;
+	margin-right:50px;
+	margin-top:20px;
+}
 /*Classes*/
 .page-wrap {
 	min-height: 100%;
@@ -159,6 +164,13 @@ html, body {
 	background-color: #d40e1d; 
 	color: #fff; 
 	padding:10px;
+	margin-bottom:5px;
+	width:1050px;
+}
+
+.collapse-title2{
+	background-color: #d40e1d; 
+	color: #fff; 
 	margin-bottom:5px;
 	width:1050px;
 }
@@ -460,6 +472,23 @@ html, body {
 	float:right !important;
 }
 
+#collapse-profile2{
+	float:right !important;
+
+}
+
 #account-wrapper{
 	margin-top:80px;
+}
+
+.scrollup {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    display: none;
+    text-indent: -9999px;
+    background: transparent;
+    cursor: pointer;
 }

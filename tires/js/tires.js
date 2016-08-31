@@ -23,7 +23,7 @@ $(function(){
 					var html='<div class="tire-enum-item row">';
 					html+='<div class="col-md-2"><img src="/mirasoltiresupply/assets/product/tires/'+item.TIRE_IMAGE_FNAME+'" width="125px" height="90px" style="margin-top:5px;" /></div>';
 					html+='<div class="col-md-10">';
-					html+='<div class="tire-name"><strong>'+ item.TIRE_SIZE+'/'+item.TIRE_RIM + ' ' + item.TIRE_DESIGN+'<span style="float:right">Php ' + item.PRODUCT_COST_PER_UNIT+ '</strong></span></div>';
+					html+='<div class="tire-name"><strong>'+ item.TIRE_BRAND + ' ' + item.TIRE_SIZE+'/'+item.TIRE_RIM + ' ' + item.TIRE_DESIGN+'<span style="float:right">Php ' + item.PRODUCT_COST_PER_UNIT+ '</strong></span></div>';
 					html+='<div class="details"><strong>TIRE SPECS</strong></div>';
 					html+='<div class="details"><strong>Size:</strong>' + item.TIRE_SIZE+'/'+item.TIRE_RIM + '</div>';
 					html+='<div class="details"><strong>UTQG:</strong></div>';

@@ -31,7 +31,7 @@
 				<div id="navigation_row"></div>
 				<div id="myaccount-body-content">
 					<div id="myaccount-body-profile">
-						<h1 class="product-title" style="font-size:300%"><strong>MY ACCOUNT</strong></h1>
+						<h1 class="product-title" style="font-size:170%"><strong>MY ACCOUNT</strong></h1>
 						<div class="top-bottom-red-border" style="">
 							<label class="padded-right-30">ACCOUNT ID</label>
 							<label id="account-id" class="checkout-data">1001</label>

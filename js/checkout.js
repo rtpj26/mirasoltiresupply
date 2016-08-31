@@ -40,50 +40,40 @@ $(function(){
 				   $('#account-contact').text(item.USER_CONTACT_NO);
 				   $('#deliver-to').text(item.USER_FNAME + ' ' + item.USER_M_INITIAL + '. ' + item.USER_LNAME);
 					$('#deliver-address').text(item.USER_ADDRESS);
-
 				})
 			}
 		}
-
 	});
 
 	$('#profile-title').click(function(){
-		if($('#profile-title').hasClass('col')){
+		if($('#profile-title').find('span#collapse-profile').text() == '+'){
 			$('#profile-title').find('span#collapse-profile').text('-');
-			$('#profile-title').addClass('col');	
 		}else{
 			$('#profile-title').find('span#collapse-profile').text('+');
-			$('#profile-title').removeClass('col');
 		}
 	});	
 
 	$('#delivery-title').click(function(){
-		if(!$('#delivery-title').hasClass('col')){
+		if($('#delivery-title').find('span#collapse-profile').text() == '+'){
 			$('#delivery-title').find('span#collapse-profile').text('-');
-			$('#delivery-title').addClass('col');	
 		}else{
 			$('#delivery-title').find('span#collapse-profile').text('+');
-			$('#delivery-title').removeClass('col');
 		}
 	});	
 
 	$('#payment-title').click(function(){
-		if(!$('#payment-title').hasClass('col')){
+		if($('#payment-title').find('span#collapse-profile').text() == '+'){
 			$('#payment-title').find('span#collapse-profile').text('-');
-			$('#payment-title').addClass('col');	
 		}else{
 			$('#payment-title').find('span#collapse-profile').text('+');
-			$('#payment-title').removeClass('col');
 		}
 	});	
 
 	$('#review-title').click(function(){
-		if($('#review-title').hasClass('coll')){
+		if($('#review-title').find('span#collapse-profile').text() == '+'){
 			$('#review-title').find('span#collapse-profile').text('-');
-			$('#review-title').addClass('col');	
 		}else{
 			$('#review-title').find('span#collapse-profile').text('+');
-			$('#review-title').removeClass('col');
 		}
 	});	
 })

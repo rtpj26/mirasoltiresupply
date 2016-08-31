@@ -115,11 +115,18 @@
 				</div>
 			</div>
 		</div>
+		<img src="/mirasoltiresupply/assets/back-top.png" class="scrollup" />
 		<div id="footer"></div>
 	</body>
 	<style> 
-			.link a, .sublink{
-				color:#000;
-			}
-		</style>
+		.link a, .sublink{
+			color:#000;
+		}
+
+		.glyphcontrol{
+			color: #fff;
+		}
+	</style>
+
+
 </html>
