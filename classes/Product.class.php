@@ -18,11 +18,14 @@ class Product{
 	}
 
 	public static function getTires($sortBy){
-		if($sortBy == ""){
-			$pdo_1 = self::$pdo->prepare("SELECT * FROM TIRE A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 1");
+		$sql = empty($sortBy) ? "SELECT * FROM TIRE A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 1" :  "SELECT * FROM TIRE A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 1 ORDER BY " . $sortBy;
+		if(empty($sortBy)){
+			$pdo_1 = self::$pdo->prepare($sql);
+			//$pdo_1 = self::$pdo->prepare("SELECT * FROM TIRE A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 1");
 			$pdo_1->execute();
 		}else{
-			$pdo_1 = self::$pdo->prepare("SELECT * FROM TIRE A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 1 ORDER BY :sortby");
+			$pdo_1 = self::$pdo->prepare($sql);
+			//$pdo_1 = self::$pdo->prepare("SELECT * FROM TIRE A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 1 ORDER BY ':sortby'");
 			$pdo_1->execute(array(":sortby" => $sortBy));
 		}
 		$result = $pdo_1->fetchAll(PDO::FETCH_ASSOC);

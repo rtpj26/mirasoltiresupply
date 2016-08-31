@@ -2,7 +2,10 @@ $(function(){
 	var ajaxURL = "/mirasoltiresupply/php/ajax_service.php";
 	gettire();
 
-
+	$('#byBrand').click(function(){
+		getsortedtire("TIRE_BRAND");
+	});
+	
 	$('#bySize').click(function(){
 		getsortedtire("TIRE_SIZE");
 	});
@@ -10,6 +13,7 @@ $(function(){
 	$('#byDesign').click(function(){
 		getsortedtire("TIRE_DESIGN");
 	});
+
 	function gettire(){
 		$.ajax({
 			type: 'POST',
