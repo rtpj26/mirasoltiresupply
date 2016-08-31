@@ -30,7 +30,7 @@
 							
 						</ul>
 					</div>
-					<div id="batt_enum"></div>
+					<div id="wheel_enum"></div>
 
 				</div>
 			</div>

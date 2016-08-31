@@ -1,7 +1,16 @@
+body{
+	overflow: hidden;
+}
+
 .link a{
 	color:#fff;
 }
 
 .sublink{
 	color: #000;
+}
+
+#wheel-enum{
+	overflow: auto;
+	max-height: 400px; 
 }
