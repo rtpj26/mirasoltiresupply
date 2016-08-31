@@ -27,7 +27,6 @@
 							<li><a href="#" id="byBrand" class="sort">By Brand</a></li>
 							<li><a href="#" id="bySize" class="sort">By Size</a></li>
 							<li><a href="#" id="byDesign" class="sort">By Design</a></li>
-							<li><a href="#" id="byManufacturer" class="sort">By Manufacturer</a></li>
 						</ul>
 					</div>
 					<div id="tire_enum">

@@ -61,6 +61,9 @@
 					$result = Product::getBatteries("");
 					die(json_encode(array('success'=>true, 'productDetails' => $result)));
 				}
+			}else if($a == 'searchTire'){
+				$result = Product::searchTire($_POST['key']);
+					die(json_encode(array('success'=>true, 'productDetails' => $result)));
 			}
 		}
 	}
