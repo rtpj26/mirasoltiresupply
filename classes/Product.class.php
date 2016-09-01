@@ -33,6 +33,14 @@ class Product{
 		return $result;
 	}
 
+	public static function searchTireByField($key, $field){
+		$sql = "SELECT * FROM TIRE A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 1 AND ". $field ." LIKE '%".$key."%'";
+		$pdo_1 = self::$pdo->prepare($sql);
+		$pdo_1->execute();
+		$result = $pdo_1->fetchAll(PDO::FETCH_ASSOC);
+		return $result;
+	}
+
 	public static function getWheels($sortBy){
 		$sql = empty($sortBy) ? "SELECT * FROM WHEEL A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 2" :  "SELECT * FROM WHEEL A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 2 ORDER BY " . $sortBy;
 		$pdo_1 = self::$pdo->prepare($sql);

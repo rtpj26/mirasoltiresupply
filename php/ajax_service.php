@@ -63,7 +63,16 @@
 				}
 			}else if($a == 'searchTire'){
 				$result = Product::searchTire($_POST['key']);
-					die(json_encode(array('success'=>true, 'productDetails' => $result)));
+				die(json_encode(array('success'=>true, 'productDetails' => $result)));
+			}else if($a == 'searchTireByField'){
+				$result = Product::searchTireByField($_POST['key'], $_POST['field']);
+				die(json_encode(array('success'=>true, 'productDetails' => $result)));
+			}
+		}elseif($t == 'session'){
+			if($a == 'addtocart'){
+				$_SESSION['cart'][0][0] = $_POST['product_type'];
+				$_SESSION['cart'][0][1] = $_POST['product_id'];
+				die(json_encode(array('success'=>true)));
 			}
 		}
 	}

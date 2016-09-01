@@ -55,3 +55,7 @@ body{
 .sort:hover{
 	text-decoration: none;
 }
+
+.global-field{
+	font-weight: 600;
+}
