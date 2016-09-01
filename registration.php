@@ -5,7 +5,12 @@
    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<?php require('required/mtsRequired.php'); ?>
-		<?php if(isset($_SESSION['users'][0]['USER_ID']))if($_SESSION['users'][0]['USER_ID'] > 0) header('location:/mirasoltiresupply'); ?>
+		<?php 	if(isset($_SESSION['users'][0]['USER_ID']))
+					if($_SESSION['users'][0]['USER_ID'] > 0 && $_SESSION['users'][0]['USER_TYPE_ID'] == 2) 
+						header('location:/mirasoltiresupply'); 
+					else
+						header('location:/mirasoltiresupply/admin');
+		?>
 		<script language="javascript" type="text/javascript" src="/mirasoltiresupply/js/reg_js.js"></script>
 	</head>
 	<body>

@@ -23,7 +23,11 @@ $(function(){
 				spass: $('#spass').val()
 			},
 			success: function(result){
-				alert('Login successful');
+				if(result.logged_in){
+					alert('Login successful');
+				}else{
+					alert('incorrect credentials');
+				}
 			},
 			error: function(){
 				alert('Invalid username/password. Please try again');
