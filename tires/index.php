@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<div id="navigation_row"></div>
-		<div class="logo"><img src="/mirasoltiresupply/assets/logo_altered.png" /></div>
+		<div class="logo"><img src="/mirasoltiresupply/assets/logo_altered.png" width="150px;"/></div>
 		<div id="tires"></div>
 		<div class="page-wrap container"  id="prod-tire">
 			<div>

@@ -1,0 +1,40 @@
+body{
+	background-image: url(../../assets/account-bg.png);
+}
+
+.menu-container{
+	float:right;
+	margin-right: 10%;
+}
+.menu-box-1{
+	width:180px;
+	height: 180px;
+}
+
+.menu-box-img{
+	width: 130px;
+}
+
+.menu-box-1 label{
+	font-size:130%;
+	color: #fff;
+}
+
+.menu-top-margin-10{
+	margin-top:10px;
+}
+
+.unread_count{
+	color:#fff;
+	position: absolute;
+    font-size: 150%;
+}
+
+.menu3{
+	background-color: #cc3333;
+	color: #fff;
+	width:390px;
+	height:180px;
+	margin-left: 0px;
+	font-size:150%;
+}

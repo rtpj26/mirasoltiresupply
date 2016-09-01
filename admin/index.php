@@ -4,32 +4,58 @@
 		<meta charset="utf-8">
    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<?php require('required/mtsRequired.php'); ?>
+		<?php require('../required/mtsRequired.php'); ?>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script language="javascript" type="text/javascript" src="js/admin.js"></script>
 	</head>
 	<body>
-		<div id="navigation_row"></div>
-		<div class="logo"><img src="assets/logo.jpg" /></div>
-		<div id="batteries"></div>
 		<div class="page-wrap container"  id="prod-batt">
-			<div>
-				<div></div>
-				<div>
-					<h1 class="product_title">BATTERIES</h1>
-					<div id="sidebar">
-						<h1 class="text-center">SEARCH</h1>
-						<input type="text" name="keyword" id="keyword" class="text-center"/>
-						<br /><br />
-						<h4 class="sidebar-font text-center">Filter By:</h4>
-						<hr>
-						<ul id="filters">
-							<li>By Brand</li>
-							<li>By Maintenance</li>
-							<li>By Plates</li>
-
-						</ul>
+			<div class="menu-container">
+				<div class="row menu-top-margin-10">
+					<div class="col-md-6">
+						<div class="menu-box-1" style="background-color:#666">
+							<center>
+								<br>
+								<img class="menu-box-img" src="../assets/accounts.png" /><br>
+								<label>accounts</label><br><br>
+								<div width="180px" height="60px" style="background-color:#cc3333; margin-top:-20px;">&nbsp</div>
+							</center>
+						</div>
 					</div>
-					<div id="batt_enum"></div>
+					<div class="col-md-6">
+						<div class="menu-box-1 " style="background-color: #999">
+							<center><br>
+								<img class="menu-box-img" src="../assets/inventory.png" /><br>
+								<label>inventory</label><br><br>
+							</center>
+						</div>
+					</div>
+				</div>
 
+				<div class="row menu-top-margin-10">
+					<div class="col-md-6">
+						<div class="menu-box-1" style="background-color:#999">
+							<center>
+								<br>
+								<img class="menu-box-img" src="../assets/rescue.png" /><br>
+								<label>rescue</label><br>
+							
+							</center>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="menu-box-1 " style="background-color: #666">
+							<center><br>
+								<img class="menu-box-img" src="../assets/comments.png" /><span class="unread_count">1</span><br>
+								<label>comments</label><br><br>
+							</center>
+						</div>
+					</div>
+				</div>
+				<div class="row menu-top-margin-10 menu3" id="switch-menu-welcome">
+					<div class="col-md-12" >
+						<p><br>welcome<br>back<br>admin<br></p>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -7,18 +7,24 @@ $(function(){
 		//getsortedtire("TIRE_BRAND");
 		globalField = "TIRE_BRAND";
 		$('#byBrand').addClass("global-field");
+		$('#bySize').removeClass("global-field");
+		$('#byDesign').removeClass("global-field"):
 	});
 	
 	$('#bySize').click(function(){
 		//getsortedtire("TIRE_SIZE");
 		globalField = "TIRE_SIZE";
+		$('#byBrand').removeClass("global-field");
 		$('#bySize').addClass("global-field");
+		$('#byDesign').removeClass("global-field"):
 	});
 
 	$('#byDesign').click(function(){
 		//getsortedtire("TIRE_DESIGN");
 		globalField = "TIRE_DESIGN";
-		$('#byDesign').addClass("global-field");
+		$('#byBrand').removeClass("global-field");
+		$('#bySize').removeClass("global-field");
+		$('#byDesign').addClass("global-field"):
 	});
 
 	$('#keyword').keyup(function(){
