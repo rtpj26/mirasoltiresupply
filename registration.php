@@ -9,7 +9,7 @@
 					if($_SESSION['users'][0]['USER_ID'] > 0 && $_SESSION['users'][0]['USER_TYPE_ID'] == 2) 
 						header('location:/mirasoltiresupply'); 
 					else
-						header('location:/mirasoltiresupply/admin');
+						header('location:/mirasoltiresupply/admin'); 
 		?>
 		<script language="javascript" type="text/javascript" src="/mirasoltiresupply/js/reg_js.js"></script>
 	</head>

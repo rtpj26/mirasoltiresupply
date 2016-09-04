@@ -32,7 +32,7 @@
 				$details = Account::findAccount($_POST['semail'], $_POST['spass']);
 				if($details){
 					$_SESSION['users'] = $details;
-					die(json_encode(array('success'=>true, 'u_data'=>$details)));
+					die(json_encode(array('success'=>true, 'logged_in'=>true,'u_data'=>$details)));
 				}else die(json_encode(array('success'=>false)));
 			}
 		}elseif($t == 'product'){
