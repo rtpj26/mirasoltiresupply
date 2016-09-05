@@ -70,9 +70,9 @@
 			}
 		}elseif($t == 'session'){
 			if($a == 'addtocart'){
-				$_SESSION['cart'][0][0] = $_POST['product_type'];
-				$_SESSION['cart'][0][1] = $_POST['product_id'];
-				die(json_encode(array('success'=>true)));
+				$_SESSION['cart'][][0] = $_POST['product_type'];
+				$_SESSION['cart'][][1] = $_POST['product_id'];
+				die(json_encode(array('success'=>true, 'current_cart'=>$_SESSION['cart'])));
 			}
 		}
 	}

@@ -8,7 +8,7 @@ $(function(){
 		globalField = "TIRE_BRAND";
 		$('#byBrand').addClass("global-field");
 		$('#bySize').removeClass("global-field");
-		$('#byDesign').removeClass("global-field"):
+		$('#byDesign').removeClass("global-field");
 	});
 	
 	$('#bySize').click(function(){
@@ -16,7 +16,7 @@ $(function(){
 		globalField = "TIRE_SIZE";
 		$('#byBrand').removeClass("global-field");
 		$('#bySize').addClass("global-field");
-		$('#byDesign').removeClass("global-field"):
+		$('#byDesign').removeClass("global-field");
 	});
 
 	$('#byDesign').click(function(){
@@ -24,7 +24,7 @@ $(function(){
 		globalField = "TIRE_DESIGN";
 		$('#byBrand').removeClass("global-field");
 		$('#bySize').removeClass("global-field");
-		$('#byDesign').addClass("global-field"):
+		$('#byDesign').addClass("global-field");
 	});
 
 	$('#keyword').keyup(function(){
@@ -38,6 +38,7 @@ $(function(){
 	$('div').delegate('button.addToCart', 'click', function(e){
 		e.stopImmediatePropagation();
 		data_id = $(this).closest('button').attr('id');
+		alert(data_id);
 		data_type = data_id.split('-')[1];
 		product_id = data_id.split('-')[3];
 		$.ajax({
@@ -52,6 +53,7 @@ $(function(){
 			success: function(result){
 				if(result.success){
 					alert('Successfully Added to Cart');
+					console.log(result.current_cart);
 				}
 			}
 		});
@@ -78,7 +80,7 @@ $(function(){
 					html+='<div class="details"><strong>UTQG:</strong></div>';
 					html+='<div class="details"><strong>Speed Rating:</strong></div>';
 					html+='<div class="details"><strong>Load Rating:</strong></div>';
-					html+='<div class="details"><strong>Warranty:</strong><button id="type-'+item.PRODUCT_TYPE+'-item-'+item.PRODUCT_ID+'" class="addToCart">ADD TO CART</button></div>';
+					html+='<div class="details"><strong>Warranty:</strong><button id="type-'+item.PRODUCT_TYPE+'-prod_id-'+item.PRODUCT_ID+'-tire_id-'+item.TIRE_ID+'" class="addToCart">ADD TO CART</button></div>';
 					html+='</div></div>';
 					$('#tire_enum').append(html);
 				});
@@ -106,7 +108,7 @@ $(function(){
 					html+='<div class="details"><strong>UTQG:</strong></div>';
 					html+='<div class="details"><strong>Speed Rating:</strong></div>';
 					html+='<div class="details"><strong>Load Rating:</strong></div>';
-					html+='<div class="details"><strong>Warranty:</strong><button id="type-'+item.PRODUCT_TYPE+'-item-'+item.PRODUCT_ID+'" class="addToCart">ADD TO CART</button></div>';
+					html+='<div class="details"><strong>Warranty:</strong><button id="type-'+item.PRODUCT_TYPE+'-prod_id-'+item.PRODUCT_ID+'-tire_id-'+item.TIRE_ID+'" class="addToCart">ADD TO CART</button></div>';
 					html+='</div></div>';
 					$('#tire_enum').append(html);
 				});
@@ -136,7 +138,7 @@ $(function(){
 					html+='<div class="details"><strong>UTQG:</strong></div>';
 					html+='<div class="details"><strong>Speed Rating:</strong></div>';
 					html+='<div class="details"><strong>Load Rating:</strong></div>';
-					html+='<div class="details"><strong>Warranty:</strong><button id="type-'+item.PRODUCT_TYPE+'-item-'+item.PRODUCT_ID+'" class="addToCart">ADD TO CART</button></div>';
+					html+='<div class="details"><strong>Warranty:</strong><button id="type-'+item.PRODUCT_TYPE+'-prod_id-'+item.PRODUCT_ID+'-tire_id-'+item.TIRE_ID+'" class="addToCart">ADD TO CART</button></div>';
 					html+='</div></div>';
 					$('#tire_enum').append(html);
 				});
@@ -167,7 +169,7 @@ $(function(){
 					html+='<div class="details"><strong>UTQG:</strong></div>';
 					html+='<div class="details"><strong>Speed Rating:</strong></div>';
 					html+='<div class="details"><strong>Load Rating:</strong></div>';
-					html+='<div class="details"><strong>Warranty:</strong><button id="type-'+item.PRODUCT_TYPE+'-item-'+item.PRODUCT_ID+'" class="addToCart">ADD TO CART</button></div>';
+					html+='<div class="details"><strong>Warranty:</strong><button id="type-'+item.PRODUCT_TYPE+'-prod_id-'+item.PRODUCT_ID+'-tire_id-'+item.TIRE_ID+'" class="addToCart">ADD TO CART</button></div>';
 					html+='</div></div>';
 					$('#tire_enum').append(html);
 				});
