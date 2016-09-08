@@ -131,9 +131,11 @@
 							<th><center>Unit Price</center></th>
 							<th><center>Amount</center></th>
 						</thead>
-						<tbody id="table_data">
-
-						</tbody>
+						<tbody id="table_data"></tbody>
+						<tr>
+							<td colspan="4" style="background-color: #000;"></td>
+							<td id="grandtotal">Amount: </td>
+						</tr>
 					</table>
 				</div>
 			</div>

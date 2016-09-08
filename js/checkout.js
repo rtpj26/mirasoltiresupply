@@ -69,6 +69,7 @@ $(function(){
 				
 			});
 			$('#table_data').html(tbody_dat);
+			$('#grandtotal').append(result.total);
 		}
 	});
 

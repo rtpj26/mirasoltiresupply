@@ -34,7 +34,7 @@ table{
 	padding-bottom: 5px;
 }
 
-thead{
+thead, #grandtotal{
 	color:#fff;
 	background-color:#000;
 }
