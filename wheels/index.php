@@ -25,9 +25,8 @@
 						<hr class="hr-red">
 						<ul id="filters">
 							<li>By Brand</li>
-							<li>By Hose</li>
+							<li>By Holes</li>
 							<li>By Size</li>
-							
 						</ul>
 					</div>
 					<div id="wheel_enum"></div>

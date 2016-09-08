@@ -38,9 +38,12 @@ $(function(){
 	$('div').delegate('button.addToCart', 'click', function(e){
 		e.stopImmediatePropagation();
 		data_id = $(this).closest('button').attr('id');
-		alert(data_id);
+		tire_detail = $(this).parents().eq(2).find('.tire-name').text();
+		desc = tire_detail.split('Php')[0];
+		price = tire_detail.split('Php')[1];
 		data_type = data_id.split('-')[1];
 		product_id = data_id.split('-')[3];
+		item_id = data_id.split('-')[5];
 		$.ajax({
 			type: 'POST',
 			url: ajaxURL,
@@ -48,7 +51,10 @@ $(function(){
 				type: 'session',
 				action: 'addtocart',
 				product_type:  data_type,
-				product_id: product_id
+				product_id: product_id,
+				item_id: item_id,
+				desc: desc,
+				price: price
 			},
 			success: function(result){
 				if(result.success){
@@ -72,7 +78,7 @@ $(function(){
 			success: function(result){
 				$.each(result.productDetails, function(i, item) {
 					var html='<div class="tire-enum-item row">';
-					html+='<div class="col-md-2"><img src="/mirasoltiresupply/assets/product/tires/'+item.TIRE_IMAGE_FNAME+'" width="125px" height="90px" style="margin-top:5px;" /></div>';
+					html+='<div class="col-md-2"><img src="/mirasoltiresupply/assets/product/tires/'+item.TIRE_IMAGE_FNAME+'" width="125px" height="90px" style="margin-top:5px;margin-left:10px;" /></div>';
 					html+='<div class="col-md-10">';
 					html+='<div class="tire-name"><strong>'+ item.TIRE_BRAND + ' ' + item.TIRE_SIZE+'/'+item.TIRE_RIM + ' ' + item.TIRE_DESIGN+'<span style="float:right">Php ' + item.PRODUCT_COST_PER_UNIT+ '</strong></span></div>';
 					html+='<div class="details"><strong>TIRE SPECS</strong></div>';
@@ -80,7 +86,7 @@ $(function(){
 					html+='<div class="details"><strong>UTQG:</strong></div>';
 					html+='<div class="details"><strong>Speed Rating:</strong></div>';
 					html+='<div class="details"><strong>Load Rating:</strong></div>';
-					html+='<div class="details"><strong>Warranty:</strong><button id="type-'+item.PRODUCT_TYPE+'-prod_id-'+item.PRODUCT_ID+'-tire_id-'+item.TIRE_ID+'" class="addToCart">ADD TO CART</button></div>';
+					html+='<div class="details"><strong>Warranty:</strong><button id="type-'+item.PRODUCT_TYPE+'-prod_id-'+item.PRODUCT_ID+'-tire_id-'+item.TIRE_ID +'" class="addToCart">ADD TO CART</button></div>';
 					html+='</div></div>';
 					$('#tire_enum').append(html);
 				});

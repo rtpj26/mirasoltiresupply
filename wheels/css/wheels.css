@@ -10,7 +10,17 @@ body{
 	color: #000;
 }
 
-#wheel-enum{
-	overflow: auto;
+#wheel_enum{
+	float:left; 
+	width:78%; 
 	max-height: 400px; 
+	opacity:0.9;
+	margin-left: 10px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.wheel-item{
+	background-color: #fff;
+	padding: 5px;
 }

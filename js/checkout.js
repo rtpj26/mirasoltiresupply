@@ -21,7 +21,9 @@ $(function(){
 			    $('#account-address').text('');
 			    $('#account-email').text('');
 				$('#account-gender').text('');
-			   $('#account-contact').text('');
+			   	$('#account-contact').text('');
+			   	$('#n-logged-in').css('display', 'inline');
+			   	$('#logged-in').css('display', 'none');
 			}else{
 				$('#sign-in-label').text('SIGNED IN AS');
 				$.each(result.u_details, function(i, item) {
@@ -41,7 +43,32 @@ $(function(){
 				   $('#deliver-to').text(item.USER_FNAME + ' ' + item.USER_M_INITIAL + '. ' + item.USER_LNAME);
 					$('#deliver-address').text(item.USER_ADDRESS);
 				})
+				$('#n-logged-in').css('display', 'none');
+			   	$('#logged-in').css('display', 'inline');
 			}
+		}
+	});
+	var tbody_dat='';
+	$.ajax({
+		type: 'POST',
+		url: ajaxURL,
+		data:{
+			type: 'session',
+			action: 'getDataInCart'
+		},
+		success: function(result){
+			
+			$.each(result.cart, function(i, item) {
+				tbody_dat+='<tr>';
+				tbody_dat+='<td><center>1</center></td>';
+				tbody_dat+='<td><center>pc</center></td>';
+				tbody_dat+='<td><center>'+item.desc+'</center></td>';
+				tbody_dat+='<td><center>'+item.price+'</center></td>';
+				tbody_dat+='<td><center>'+item.price+'</center></td>';
+				tbody_dat+='</tr>';
+				
+			});
+			$('#table_data').html(tbody_dat);
 		}
 	});
 
@@ -75,5 +102,33 @@ $(function(){
 		}else{
 			$('#review-title').find('span#collapse-profile').text('+');
 		}
-	});	
+	});
+
+	$('#checkout_login').click(function(){
+		login();
+		location.reload();
+	})	
+
+	function login(){
+		$.ajax({
+			type: 'POST',
+			url: ajaxURL,
+			data:{
+				type: "account_control",
+				action: 'login',
+				semail: $('#semail').val(),
+				spass: $('#spass').val()
+			},
+			success: function(result){
+				if(result.logged_in){
+					alert('Login successful');
+				}else{
+					alert('incorrect credentials');
+				}
+			},
+			error: function(){
+				alert('Invalid username/password. Please try again');
+			}
+		});
+	}
 })

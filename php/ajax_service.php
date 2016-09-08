@@ -13,10 +13,16 @@
 		if($t == 'account_control'){
 			if($a == 'checkSessionLoggedIn'){
 				if(isset($_SESSION['users'])){
-					if($_SESSION['users'][0]['USER_ID'] > 0) die(json_encode(array("success"=>true,"logged_in"=>true, "u_details"=>$_SESSION['users'])));
+					if($_SESSION['users'][0]['USER_ID'] > 0) {
+						$_SESSION['logged_in']=true;
+						die(json_encode(array("success"=>true,"logged_in"=>true, "u_details"=>$_SESSION['users'])));
+					}
 				}
 				//else if($_SESSION['users'][0]['USER_ID'] <= 0) die(json_encode(array("success"=>true,"logged_in"=>false)));
-				else die(json_encode(array("logged_in"=>false)));
+				else{
+					$_SESSION['logged_in']=false;
+				 	die(json_encode(array("logged_in"=>false)));
+				}
 				//else die(json_encode(array("success"=>false)));
 			}else if($a == 'signup'){
 				$details = Account::findAccount($_POST['email'], $_POST['pass']);
@@ -32,6 +38,7 @@
 				$details = Account::findAccount($_POST['semail'], $_POST['spass']);
 				if($details){
 					$_SESSION['users'] = $details;
+					$_SESSION['logged_in'] = true;
 					die(json_encode(array('success'=>true, 'logged_in'=>true,'u_data'=>$details)));
 				}else die(json_encode(array('success'=>false)));
 			}
@@ -70,9 +77,12 @@
 			}
 		}elseif($t == 'session'){
 			if($a == 'addtocart'){
-				$_SESSION['cart'][][0] = $_POST['product_type'];
-				$_SESSION['cart'][][1] = $_POST['product_id'];
+				$newArrData = array('type'=>$_POST['product_type'], 'prod_id'=>$_POST['product_id'], 'item_id'=>$_POST['item_id'], 'desc'=>$_POST['desc'], 'price'=>$_POST['price']);
+				if(!isset($_SESSION['cart_count']) || empty($_SESSION['cart_count'])) $_SESSION['cart_count'] = 0;
+				$_SESSION['cart'][$_SESSION['cart_count']++] = $newArrData; 
 				die(json_encode(array('success'=>true, 'current_cart'=>$_SESSION['cart'])));
+			}else if($a == 'getDataInCart'){
+				die(json_encode(array('cart'=>$_SESSION['cart'])));
 			}
 		}
 	}

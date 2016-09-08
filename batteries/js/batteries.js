@@ -13,24 +13,26 @@ $(function(){
 			},
 			success: function(result){
 				var html  = '';
-				var i = 0;
+				var i2 = 0;
 				$.each(result.productDetails, function(i, item) {
-					if(i==0){
-						html +='<div class="tire-enum-item row"><div class="col-md-1"></div>';
+					if(i2==0){
+						html +='<div class="row"><div class="col-md-1"></div>';
 					}
-						html += '<div class="col-md-2 text-center">';
-						html += '<img src="/mirasoltiresupply/assets/product/batteries/'+item.BATTERY_IMAGE_FNAME+'" width="90px" height="90px" style="margin-top:5px;" /><br>';
-						html += '<span class="product-title">' + item.BATTERY_TYPE + '</span><br>';
-						html += '<a href="#" data-toggle="tooltip" data-placement="right" title="' + item.BATTERY_TYPE + '">View Details</a>';
-						html += '</div>';
-						i+=1;
+					html += '<div class="col-md-2 text-center">';
+					html += '<img src="/mirasoltiresupply/assets/product/batteries/'+item.BATTERY_IMAGE_FNAME+'" width="90px" height="90px" style="margin-top:5px;" /><br>';
+					html += '<span class="product-title">' + item.BATTERY_DESCRIPTION + '</span><br>';
+					html += '<span class="product-price"><strong>' + item.PRODUCT_COST_PER_UNIT+ '</strong></span><br>';
+					html += '<a href="#" data-toggle="tooltip" data-placement="right" title="' + item.BATTERY_TYPE + '">Add To Cart</a>';
+					html += '</div>';
+					i2+=1;
 					
-					if(i==5){
+					if(i2==5){
 						html += '<div class="col-md-1"></div></div>';
-						i=0;
+						i2=0;
 					}
-					$('#batt_enum').append(html);
+					
 				});
+				$('#batt_enum').append(html);
 			}
 		});
 	}

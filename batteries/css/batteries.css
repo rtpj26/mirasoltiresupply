@@ -1,6 +1,7 @@
 body{
 	overflow: hidden;
 }
+
 .link a{
 	color:#fff;
 }
@@ -10,6 +11,11 @@ body{
 }
 
 #batt-enum{
-	overflow: auto;
+	float:left; 
+	width:78%; 
 	max-height: 400px; 
+	opacity:0.9;
+	margin-left: 10px;
+	overflow: auto;
+	overflow-x: hidden;
 }

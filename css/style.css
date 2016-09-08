@@ -237,6 +237,7 @@ html, body {
 	background-image: url('/mirasoltiresupply/assets/bg_rnr.png');
 	width:100%;
 	height:100%;
+	margin-top: -20px;
 	color:#fff;
 }
 
@@ -270,6 +271,7 @@ html, body {
 	width:100%;
 	height:100%;
 	padding-top:-20px;
+	margin-top: -20px;
 }
 
 #cu_link{
@@ -366,6 +368,14 @@ html, body {
 	width:78%; 
 	height: 400px; 
 	opacity:0.9;
+}
+
+#wheel_enum{
+	color: #000; 
+	float:left; 
+	width:78%; 
+	height: 400px; 
+
 }
 
 #sidebar{
