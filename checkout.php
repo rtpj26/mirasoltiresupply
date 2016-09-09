@@ -137,6 +137,7 @@
 							<td id="grandtotal">Amount: </td>
 						</tr>
 					</table>
+					<center><button id="order">ORDER!</order></center>
 				</div>
 			</div>
 

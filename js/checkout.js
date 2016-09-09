@@ -60,11 +60,11 @@ $(function(){
 			
 			$.each(result.cart, function(i, item) {
 				tbody_dat+='<tr>';
-				tbody_dat+='<td><center>1</center></td>';
-				tbody_dat+='<td><center>pc</center></td>';
-				tbody_dat+='<td><center>'+item.desc+'</center></td>';
-				tbody_dat+='<td><center>'+item.price+'</center></td>';
-				tbody_dat+='<td><center>'+item.price+'</center></td>';
+				tbody_dat+='<td class="odd"><center>1</center></td>';
+				tbody_dat+='<td class="even"><center>pc</center></td>';
+				tbody_dat+='<td class="odd"><center>'+item.desc+'</center></td>';
+				tbody_dat+='<td class="even"><center>'+item.price+'</center></td>';
+				tbody_dat+='<td class="odd"><center>'+item.price+'</center></td>';
 				tbody_dat+='</tr>';
 				
 			});

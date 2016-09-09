@@ -1,35 +1,31 @@
-
-#logged-in{
-	display: none;
+body{
+	overflow: hidden;
 }
 
-#n-logged-in hr{
+.link a{
+	color:#fff;
+}
+
+.sublink{
 	color: #000;
-	background-color: #000;
 }
 
-.custom-input-checkout{
-	color: #ff0000;
-	text-align: left;
-	border-width: 0px;
-	border-style: none;	
-	margin-left: -50px;
+.product_title{
+	margin-top: 125px;
+    margin-right: 65px;
 }
 
-.custom-checkout-login{
-	color: #000;
-	text-decoration: none;
-	cursor: pointer;
-};
-
-.custom-checkout-login:hover{
-	color:#555;
-	text-decoration: none;
-	cursor: pointer;
-};
+.custom-hr{
+	background-color: #fff;
+    width: 1175px;
+    height: 5px;
+    float: right;
+    margin-right: 65px;
+    margin-top: -20px;
+}
 
 table{
-	width:100% !important;
+	width:80% !important;
 	padding-top:5px;
 	padding-bottom: 5px;
 }
@@ -43,6 +39,7 @@ table thead th{
 	width:20%;
 }
 
+
 .odd{
 	background-color: #b4b3b3;
 }
@@ -55,6 +52,7 @@ table thead th{
 	color: #ca3d33;
 }
 
+
 #order{
 	color: #fff;
 	background-color:#f00;
@@ -62,4 +60,6 @@ table thead th{
 	padding-left:60px;
 	padding-right: 60px;
 	border-width: 0px;
+	float: right;
+	margin-right:135px;
 }

@@ -20,7 +20,7 @@
 			            <li><a class="sublink" href="/mirasoltiresupply/php/logout.php" id="logout">Logout</a></li>
 			        </ul>
 			    </li>
-				<li class="link"><a href="/mirasoltiresupply/checkout.php"><span class="glyphicon glyphicon-shopping-cart glyphcontrol"></a></li>
+				<li class="link"><a href="/mirasoltiresupply/mycart.php"><span class="glyphicon glyphicon-shopping-cart glyphcontrol"></a></li>
 			</ul>
 		</div>
 	</nav>

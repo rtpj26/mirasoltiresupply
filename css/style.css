@@ -454,6 +454,18 @@ html, body {
 	z-index: -99999
 }
 
+#mycart{
+	background-image: url('../assets/cart_bg.png');
+	background-repeat: no-repeat; 
+	position: absolute; 
+	top:0px; 
+	bottom:0px; 
+	height:100%; 
+	width: 100%; 
+	overflow: hidden; 
+	z-index: -99999
+}
+
 #wheels{
 	background-image: url('/mirasoltiresupply/assets/whe219dah.jpg'); 
 	background-repeat: no-repeat; 
