@@ -49,6 +49,22 @@ class Product{
 		return $result;
 	}
 
+	public static function searchWheel($key){
+		$sql = "SELECT * FROM WHEEL A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 2 AND WHEEL_RIM LIKE '%".$key."%' OR WHEEL_BRAND LIKE '%".$key."%' OR WHEEL_COLOR LIKE '%".$key."%' OR WHEEL_HOLES LIKE '%".$key."%' GROUP BY WHEEL_ID";
+		$pdo_1 = self::$pdo->prepare($sql);
+		$pdo_1->execute();
+		$result = $pdo_1->fetchAll(PDO::FETCH_ASSOC);
+		return $result;
+	}
+
+	public static function searchWheelByField($key, $field){
+		$sql = "SELECT * FROM WHEEL A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 2 AND ". $field ." LIKE '%".$key."%'";
+		$pdo_1 = self::$pdo->prepare($sql);
+		$pdo_1->execute();
+		$result = $pdo_1->fetchAll(PDO::FETCH_ASSOC);
+		return $result;
+	}
+
 	public static function getBatteries($sortBy){
 		$sql = empty($sortBy) ? "SELECT * FROM BATTERY A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 3" :  "SELECT * FROM BATTERY A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 3 ORDER BY " . $sortBy;
 		$pdo_1 = self::$pdo->prepare($sql);

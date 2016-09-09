@@ -463,7 +463,7 @@ html, body {
 	height:100%; 
 	width: 100%; 
 	overflow: hidden; 
-	z-index: -99999
+	z-index: -999999999;
 }
 
 #wheels{

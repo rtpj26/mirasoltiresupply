@@ -11,16 +11,16 @@ body{
 }
 
 .product_title{
-	margin-top: 125px;
-    margin-right: 65px;
+	margin-top: 60px;
+    margin-right: 130px;
 }
 
 .custom-hr{
 	background-color: #fff;
-    width: 1175px;
+    width: 1095px;
     height: 5px;
     float: right;
-    margin-right: 65px;
+    margin-right: 135px;
     margin-top: -20px;
 }
 
@@ -62,4 +62,8 @@ table thead th{
 	border-width: 0px;
 	float: right;
 	margin-right:135px;
+}
+
+.delete{
+	cursor: pointer;
 }

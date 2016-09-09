@@ -71,14 +71,20 @@
 			}else if($a == 'searchTire'){
 				$result = Product::searchTire($_POST['key']);
 				die(json_encode(array('success'=>true, 'productDetails' => $result)));
+			}else if($a == 'searchWheel'){
+				$result = Product::searchWheel($_POST['key']);
+				die(json_encode(array('success'=>true, 'productDetails' => $result)));
 			}else if($a == 'searchTireByField'){
 				$result = Product::searchTireByField($_POST['key'], $_POST['field']);
+				die(json_encode(array('success'=>true, 'productDetails' => $result)));
+			}else if($a == 'searchWheelByField'){
+				$result = Product::searchWheelByField($_POST['key'], $_POST['field']);
 				die(json_encode(array('success'=>true, 'productDetails' => $result)));
 			}
 		}elseif($t == 'session'){
 			if($a == 'addtocart'){
-				$newArrData = array('type'=>$_POST['product_type'], 'prod_id'=>$_POST['product_id'], 'item_id'=>$_POST['item_id'], 'desc'=>$_POST['desc'], 'price'=>$_POST['price']);
 				if(!isset($_SESSION['cart_count']) || empty($_SESSION['cart_count'])) $_SESSION['cart_count'] = 0;
+				$newArrData = array('type'=>$_POST['product_type'], 'prod_id'=>$_POST['product_id'], 'item_id'=>$_POST['item_id'], 'desc'=>$_POST['desc'], 'price'=>$_POST['price'], 'id'=>$_SESSION['cart_count']);
 				$_SESSION['cart'][$_SESSION['cart_count']++] = $newArrData; 
 	
 				die(json_encode(array('success'=>true, 'current_cart'=>$_SESSION['cart'])));
@@ -88,6 +94,13 @@
 					$grandtotal += $amount['price'];
 				}
 				die(json_encode(array('cart'=>$_SESSION['cart'], 'total'=>$grandtotal)));
+			}else if($a == 'removeFromCart'){
+				unset($_SESSION['cart'][$_POST['index']]);
+				$grandtotal = 0.00;
+				foreach($_SESSION['cart'] as $amount){
+					$grandtotal += $amount['price'];
+				}
+				die(json_encode(array('success'=>true, 'total'=>$grandtotal)));
 			}
 		}
 	}

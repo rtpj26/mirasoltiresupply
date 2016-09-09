@@ -12,7 +12,7 @@
 		<div id="navigation_row"></div>
 		<div class="logo"><img src="/mirasoltiresupply/assets/logo_altered.png" width="150px;"/></div>
 		<div></div>
-		<div class="page-wrap container"  id="mycart">
+		<div class="page-wrap container"  id="mycart"></div>
 			<div>
 				<div></div>
 				<div>
@@ -27,18 +27,20 @@
 						<th><center>Description</center></th>
 						<th><center>Unit Price</center></th>
 						<th><center>Amount</center></th>
+						<th><center>Actions</center></th>
 					</thead>
 					<tbody id="table_data"></tbody>
 					<tr>
 						<td colspan="4" style="background-color: #000;"></td>
 						<td id="grandtotal">Amount: </td>
+						<td style="background-color: #000;"></td>
 					</tr>
 				</table>
 
 			</center>
-			<button id="order">ORDER!</order>
+			<a href="checkout.php" style="color:#fff; text-decoration: none;"><button id="order">ORDER!</order></a>
 			</div>
-		</div>
+		
 		<!--<div id="footer" class="site-footer"></div>-->
 	</body>
 	

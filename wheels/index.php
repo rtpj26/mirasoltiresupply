@@ -24,9 +24,9 @@
 						<h4 class="sidebar-font text-center">Filter By:</h4>
 						<hr class="hr-red">
 						<ul id="filters">
-							<li>By Brand</li>
-							<li>By Holes</li>
-							<li>By Size</li>
+							<li><a href="#" id="byBrand" class="sort">By Brand</a></li>
+							<li><a href="#" id="byHoles" class="sort">By Holes</a></li>
+							<li><a href="#" id="bySize" class="sort">By Size</a></li>
 						</ul>
 					</div>
 					<div id="wheel_enum"></div>
