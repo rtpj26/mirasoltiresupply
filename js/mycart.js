@@ -14,7 +14,19 @@ $(function(){
 			$.each(result.cart, function(i, item) {
 				tbody_dat+='<tr id="'+item.id+'">';
 				tbody_dat+='<td class="odd"><center>1</center></td>';
-				tbody_dat+='<td class="even"><center>pc</center></td>';
+				tbody_dat+='<td class="even"><center>';
+				switch(item.type){
+					case "1":
+						tbody_dat += 'pc';
+						break;
+					case "2":
+						tbody_dat += 'set of 4';
+						break;
+					default:
+						tbody_dat += 'pc';
+						break;
+				}
+				tbody_dat+='</center></td>';
 				tbody_dat+='<td class="odd desc"><center>'+item.desc+'</center></td>';
 				tbody_dat+='<td class="even"><center>'+item.price+'</center></td>';
 				tbody_dat+='<td class="odd"><center>'+item.price+'</center></td>';

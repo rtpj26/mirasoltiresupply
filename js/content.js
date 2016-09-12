@@ -22,6 +22,26 @@ $(function(){
         return false;
     });
 
+    $('#cu_button').click(function(){
+    	var cu_name = $('#cu_name').val();
+    	var cu_email = $('#cu_email').val();
+    	var cu_pnum = $('#cu_pnum').val();
+    	var cu_msg = $('#cu_message').val();
+    	$.ajax({
+    		type: 'POST',
+    		url: ajaxURL,
+    		data:{
+    			type: 'comments',
+    			action: 'addComment',
+    			name: cu_name,
+    			email: cu_email,
+    			pnum: cu_pnum,
+    			msg: cu_msg
+    		},success: function(){
+    			alert('Comment Sent');
+    		}
+    	});
+    });
 	/***************Functions********************/
 	function checklogin(){
 		$.ajax({

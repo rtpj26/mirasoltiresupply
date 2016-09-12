@@ -34,6 +34,14 @@
 				</div>
 			</div>
 		</div>
+		<div id="quantityInquiry" role="dialog">
+			<form>
+				<label>
+					Enter number of tires to purchase:
+					<input id="qtyPurchased" type="number"/>
+				</label>
+			</form>
+		</div>
 		<!--<div id="footer" class="site-footer"></div>-->
 
 	</body>

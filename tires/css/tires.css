@@ -60,3 +60,7 @@ body{
 .global-field{
 	font-weight: 600;
 }
+
+#quantityInquiry{
+	display: none;
+}

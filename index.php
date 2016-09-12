@@ -62,11 +62,11 @@
 				<div id="contact_us_content">
 					<h1>Contact Us</h1>
 					<form role="form" id="cu_frm">
-						<input class="custom_input_f" type="text" name="cu_name" placeholder="Name*" size="48" required/><br>
-						<input class="custom_input" type="text" name="cu_email" placeholder="E-mail*" size="48" required/><br>
-						<input class="custom_input" type="text" name="cu_pnum" placeholder="Phone Number*" size="48" required/><br>
-						<textarea class="custom_input" type="text" name="cu_message" cols="50" rows="4" placeholder="Message*" required/></textarea><br>
-						<button class="cu_button">Send</button>
+						<input class="custom_input_f" type="text" name="cu_name" id="cu_name" placeholder="Name*" size="48" required/><br>
+						<input class="custom_input" type="text" name="cu_email" id="cu_email" placeholder="E-mail*" size="48" required/><br>
+						<input class="custom_input" type="text" name="cu_pnum" id="cu_pnum" placeholder="Phone Number*" size="48" required/><br>
+						<textarea class="custom_input" type="text" name="cu_message" id="cu_message"cols="50" rows="4" placeholder="Message*" required/></textarea><br>
+						<button class="cu_button" id="cu_button">Send</button>
 					</form>
 				</div>
 

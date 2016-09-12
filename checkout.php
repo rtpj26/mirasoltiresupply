@@ -95,13 +95,14 @@
 				</div>
 				<div id="delivery-div" class="collapse">
 					<div class="box">
-						<p id="deliver-to">User</p>
+						<p id="deliver-to">User<span class="glyphicon glyphicon-pencil" id="editDelivery"></span></p>
 						<p id="deliver-address"><span class="glyphicon glyphicon-pushpin"></span> here</p>
 					</div>
 					<div class="text-center">
 						<button class="checkout-button">Save and Continue</button>
 					</div>
 				</div>
+
 
 				<div class="collapse-title" data-toggle="collapse" href="#payment-div" id="payment-title">
 					<span class="glyphicon glyphicon-credit-card"></span>
@@ -110,18 +111,127 @@
 					<span id="collapse-profile">+</span>
 				</div>
 				<div id="payment-div" class="collapse">
-					<div class="box">
-						<p id="deliver-to">User</p>
-						<p id="deliver-address"><span class="glyphicon glyphicon-pushpin"></span> here</p>
+					<div id="payment-method-selection">
+						<div class="row">
+							<div class="col-md-4">
+								<center>
+									<a href="#" id="credit-selection">CREDIT CARD</a>
+								</center>
+							</div>
+							<div class="col-md-4">
+								<center>
+									<a href="#" id="cod-selection">CASH ON DELIVERY</a>
+								</center>
+							</div>
+							<div class="col-md-4">
+								<center>
+									<a href="#" id="check-selection">CHECK</a>
+								</center>
+							</div>
+						</div>
 					</div>
-					<button>Save and Continue</button>
+					<div id="selected-mop">
+						<div id="selected-cc" class="arrow_box_1">
+							<center><p>We accept 
+								<img src="/mirasoltiresupply/assets/Master-Card-icon.png" width="50px"/>
+								<img src="/mirasoltiresupply/assets/credit_visa.png" width="50px"/>
+							</p></center>
+							<br>
+							<div class="row">
+								<div class="col-md-2 mop-label">
+									<strong><label class="">CARD NO:</label></strong>
+								</div>
+								<div class="col-md-4">
+									<input type="text" name="card-no" id="card-no" class="mop-input"/>
+								</div>
+								<div class="col-md-2 mop-label">
+									<strong><label class="">NAME IN CARD:</label></strong>
+								</div>
+								<div class="col-md-4">
+									<input type="text" name="card-name" id="card-name" class="mop-input"/>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-md-2 mop-label">
+									<strong><label class="">EXPIRY DATE:</label></strong>
+								</div>
+								<div class="col-md-4">
+									<input type="text" name="card-expiry-month" id="card-expiry-month" class="mop-input mop-num" placeholder="MM"/>
+									<input type="text" name="card-expiry-year" id="card-expiry-year" class="mop-input mop-num" placeholder="YYYY"/>
+								</div>
+								<div class="col-md-2 mop-label">
+									<strong><label class="">SECURITY CODE:</label></strong>
+								</div>
+								<div class="col-md-4">
+									<input type="text" name="card-security" id="card-security" class="mop-input mop-security"/>
+									<img src="/mirasoltiresupply/assets/csc_visamc.png" width="50px"/>
+								</div>
+							</div>
+							<center><button id="mop-cc-save">Save and Continue</button></center>
+						</div>
+
+
+
+						<div id="selected-cod" class="arrow_box_2">
+							<center>
+								<img src="/mirasoltiresupply/assets/truck.png" width="200px"/>
+								<span class="glyphicon glyphicon-play" style="font-size:400%;padding-left:50px; padding-right:50px;"></span>
+								<img src="/mirasoltiresupply/assets/payment-512.png" width="200px"/>
+							</center>
+							<br>
+							<label class="cod-step1"><strong>YOUR ORDER WILL BE DELIVERED TO YOU</strong></label>
+							<label class="cod-step2"><strong><center>PAY OUR DELIVERY STAFF IN CASH AND COLLECT YOUR ORDER</center></strong></label>
+							<br>
+							<center><button id="mop-cod-save">Save and Continue</button></center>
+						</div>
+
+
+
+
+						<div id="selected-c" class="arrow_box_3">
+							<div class="row" style="margin-top:30px;">
+								<div class="col-md-3"></div>
+								<div class="col-md-3 c-labels" >
+									<label><strong>BANK*</strong></label>
+								</div>
+								<div class="col-md-3">
+									<input class="c-input" id="c-bank" name="c-bank" />
+								</div>
+								<div class="col-md-3"></div>
+							</div>
+							<div class="row" style="margin-top:30px;">
+								<div class="col-md-3"></div>
+								<div class="col-md-3 c-labels" >
+									<label><strong>CHECK NUMBER*</strong></label>
+								</div>
+								<div class="col-md-3">
+									<input class="c-input" id="c-num" name="c-num" />
+								</div>
+								<div class="col-md-3"></div>
+							</div>
+							<div class="row" style="margin-top:30px; margin-bottom:30px;">
+								<div class="col-md-3"></div>
+								<div class="col-md-3 c-labels" >
+									<label><strong>PESOS*</strong></label>
+								</div>
+								<div class="col-md-3">
+									<input class="c-input" id="c-amnt" name="c-amnt" />
+								</div>
+								<div class="col-md-3"></div>
+								<br>
+								<center><button id="mop-c-save" style="margin-top:30px;">Save and Continue</button></center>
+							</div>
+						</div>
+					</div>
+				
 				</div>
 
 				<div class="collapse-title" data-toggle="collapse" href="#review-div" id="review-title">
 					<span class="glyphicon glyphicon-ok-sign"></span>
 					<span id="sign-in-label">PLACE AND REVIEW ORDERS</span>
-					<span id="collapse-profile">+</span>
-				</div>
+					<span id="collapse-profile">+</span				<input type="text" id="deliveryName" name="deliveryName"/>>
+				</div>				
 				<div id="review-div" class="collapse">
 					<table class="table">
 						<thead>
@@ -142,6 +252,13 @@
 			</div>
 
 		</div>
+		<div id="editDeliveryDialog" role="dialog" >
+			<center>
+				<strong><span class="glyphicon glyphicon-pencil"></span> EDIT DELIVERY INFORMATION</strong><br>
+				
+			</center>
+		</div>
+
 		<!--<div id="footer" class="site-footer"></div>-->
 	</body>
 	<style> 

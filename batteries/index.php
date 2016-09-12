@@ -24,9 +24,8 @@
 						<h4 class="sidebar-font text-center">Filter By:</h4>
 						<hr>
 						<ul id="filters">
-							<li>By Brand</li>
-							<li>By Maintenance</li>
-							<li>By Plates</li>
+							<li><a href="#" id="byBrand">By Brand</a></li>
+							<li><a href="#" id="byPlates">By Plates</a></li>
 						</ul>
 					</div>
 					<div id="batt_enum"></div>

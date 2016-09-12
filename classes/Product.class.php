@@ -73,5 +73,21 @@ class Product{
 		return $result;
 	}
 
+	public static function searchBattery($key){
+		$sql = "SELECT * FROM BATTERY A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 3 AND BATTERY_DESCRIPTION LIKE '%".$key."%' OR BATTERY_PLATES LIKE '%".$key."%' GROUP BY BATTERY_ID";
+		$pdo_1 = self::$pdo->prepare($sql);
+		$pdo_1->execute();
+		$result = $pdo_1->fetchAll(PDO::FETCH_ASSOC);
+		return $result;
+	}
+
+	public static function searchBatteryByField($key, $field){
+		$sql = "SELECT * FROM BATTERY A INNER JOIN PRODUCT B WHERE B.PRODUCT_ID = A.PRODUCT_ID AND B.PRODUCT_TYPE = 3 AND ". $field ." LIKE '%".$key."%'";
+		$pdo_1 = self::$pdo->prepare($sql);
+		$pdo_1->execute();
+		$result = $pdo_1->fetchAll(PDO::FETCH_ASSOC);
+		return $result;
+	}
+
 }
 ?>

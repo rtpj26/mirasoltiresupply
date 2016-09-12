@@ -63,3 +63,127 @@ table thead th{
 	padding-right: 60px;
 	border-width: 0px;
 }
+
+#payment-method-selection{
+	background-color: #000;
+	color: #FFF;
+
+	padding-top:15px;
+	padding-bottom:15px
+}
+
+#payment-method-selection a{
+	color: #FFF;;
+}
+
+.mop-label, .c-label{
+	text-align: right;
+}
+
+.mop-input, .c-input{
+	border-width: 0px;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-color: #f00;
+	border-top-color: #f00;
+	width: 260px;
+}
+
+.c-input{
+	margin-left: -50px;
+}
+.c-label{
+	margin-left:100px;
+}
+
+.mop-num{
+	border-width: 0px;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-color: #f00;
+	width: 65px;
+	text-align: center;
+}
+
+.mop-security{
+	width: 150px;
+}
+
+#selected-mop{
+	margin-bottom:20px;
+}
+
+#mop-cc-save, #mop-cod-save, #mop-c-save{
+	border-width: 0px;
+	background-color: #d40e1d;
+	padding: 10px 100px 10px 100px;
+	color: #fff;
+}
+.arrow_box_1, .arrow_box_2, .arrow_box_3{
+	position: relative;
+	background: #fff;
+}
+
+.cod-step1{
+ 	color: #ff0000;
+    width: 285px;
+    margin-left: 195px;
+    font-weight: 400;
+}
+
+.cod-step2{
+	color: #ff0000;
+    width: 285px;
+    margin-left: 95px;
+    font-weight: 400;
+}
+.arrow_box_1:after {
+	bottom: 90%;
+	left: 10%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 30px;
+	margin-left: -30px;
+}
+
+.arrow_box_2:after {
+	bottom: 90%;
+	left: 43%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 30px;
+	margin-left: -30px;
+}
+
+.arrow_box_3:after {
+	bottom: 90%;
+	left: 81%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #fff;
+	border-width: 30px;
+	margin-left: -30px;
+}
+
+#editDeliveryDialog{
+	display: none;
+	padding: 10px 20px 10px 20px;
+
+}

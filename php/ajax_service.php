@@ -4,7 +4,9 @@
 
 	include_once('../classes/Account.class.php');
 	include_once('../classes/Product.class.php');
-
+	include_once('../classes/Transaction.class.php');
+	include_once('../classes/Contact.class.php');
+	
 	$method = $_SERVER['REQUEST_METHOD'];
 	if($method == "POST"){
 		$a = $_POST['action'];
@@ -18,7 +20,6 @@
 						die(json_encode(array("success"=>true,"logged_in"=>true, "u_details"=>$_SESSION['users'])));
 					}
 				}
-				//else if($_SESSION['users'][0]['USER_ID'] <= 0) die(json_encode(array("success"=>true,"logged_in"=>false)));
 				else{
 					$_SESSION['logged_in']=false;
 				 	die(json_encode(array("logged_in"=>false)));
@@ -41,6 +42,8 @@
 					$_SESSION['logged_in'] = true;
 					die(json_encode(array('success'=>true, 'logged_in'=>true,'u_data'=>$details)));
 				}else die(json_encode(array('success'=>false)));
+			}else if($a == 'updateDeliveryDetails'){
+
 			}
 		}elseif($t == 'product'){
 			if($a == 'getTires'){
@@ -74,11 +77,17 @@
 			}else if($a == 'searchWheel'){
 				$result = Product::searchWheel($_POST['key']);
 				die(json_encode(array('success'=>true, 'productDetails' => $result)));
+			}else if($a == 'searchBattery'){
+				$result = Product::searchBattery($_POST['key']);
+				die(json_encode(array('success'=>true, 'productDetails' => $result)));
 			}else if($a == 'searchTireByField'){
 				$result = Product::searchTireByField($_POST['key'], $_POST['field']);
 				die(json_encode(array('success'=>true, 'productDetails' => $result)));
 			}else if($a == 'searchWheelByField'){
 				$result = Product::searchWheelByField($_POST['key'], $_POST['field']);
+				die(json_encode(array('success'=>true, 'productDetails' => $result)));
+			}else if($a == 'searchBatteryByField'){
+				$result = Product::searchBatteryByField($_POST['key'], $_POST['field']);
 				die(json_encode(array('success'=>true, 'productDetails' => $result)));
 			}
 		}elseif($t == 'session'){
@@ -101,6 +110,37 @@
 					$grandtotal += $amount['price'];
 				}
 				die(json_encode(array('success'=>true, 'total'=>$grandtotal)));
+			}
+		}elseif($t == 'transaction'){
+			if($a == 'createTransaction'){
+				$transactionId = Transaction::createPurchaseTransaction($_SESSION['users'][0]['USER_ID'], $_POST['mop']);
+				$mopId = $_POST['lastMopId'];
+				$result_bool = true;
+				foreach($_SESSION['cart'] as $purchase_item){
+					$result = Transaction::addTransactionItem($_SESSION['users'][0]['USER_ID'] , $transactionId, $purchase_item['prod_id'], 1, $purchase_item['price']);
+					if($result) $result_bool &= true;
+					else $result_bool &= false;
+				}
+				unset($_SESSION['cart']);
+				die(json_encode(array('success'=>$result_bool)));
+			}else if($a == 'createCODDetail'){
+
+			}elseif($a == 'createCreditDetail'){
+				$detail_id = Transaction::createCreditDetail($_POST['card_no'], $_POST['card_name'], $_POST['exp_month'], $_POST['exp_year'], $_POST['card_security']);
+				$_SESSION['credit_id'] = $detail_id;
+				if($detail_id) die(json_encode(array('success'=>true, 'id'=>$detail_id)));
+				else die(json_encode(array('success'=>false)));
+			}elseif($a == 'createCheckDetail'){
+				$detail_id = Transaction::createCheckDetail($_POST['bank'], $_POST['cnumber'], $_POST['amount']);
+				$_SESSION['credit_id'] = $detail_id;
+				if($detail_id) die(json_encode(array('success'=>true, 'id'=>$detail_id)));
+				else die(json_encode(array('success'=>false)));
+				
+			}
+		}elseif($t == 'comments'){
+			if($a=='addComment'){
+				Contact::addComment($_POST['name'], $_POST['email'], $_POST['msg'], $_POST['pnum']);
+				die(json_encode(array('success'=>true)));
 			}
 		}
 	}
