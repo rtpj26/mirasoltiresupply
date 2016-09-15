@@ -41,7 +41,7 @@
 					</div>	
 				</div>
 
-				<!--<div id="accounts">
+				<div id="accounts">
 					<h1><strong>CUSTOMER ACCOUNTS</strong></h1>
 					<table id="customer-accounts">
 						<thead>
@@ -78,7 +78,7 @@
 						<tbody id="tbody_all">
 						</tbody>
 					</table>
-				</div>-->
+				</div>
 			</div>
 
 			<div id="comment_dialog" role="dialog">

@@ -1,6 +1,7 @@
 $(function(){
 	var ajaxURL = "/mirasoltiresupply/php/ajax_service.php";
 	$('#accounts').css('display', 'none');
+	$('#inventory').css('display', 'none');
 	$.ajax({
 		type: 'POST',
 		url: ajaxURL,
@@ -118,17 +119,34 @@ $(function(){
 	$('#accounts_link').click(function(){
 		$('#accounts').css('display', 'inherit');
 		$('#comments').css('display', 'none');
+		$('#inventory').css('display', 'none');
+		
 		$('#accounts_link').addClass('active');
 		$('#comments_link').removeClass('active');
+		$('#inventory_link').removeClass('active');
 			
 	})
 
 	$('#comments_link').click(function(){
 		$('#accounts').css('display', 'none');
 		$('#comments').css('display', 'inherit');
+		$('#inventory').css('display', 'none');
+		
 		$('#accounts_link').removeClass('active');
 		$('#comments_link').addClass('active');
-			
+		$('#inventory_link').removeClass('active');
+					
+	})
+
+	$('#inventory_link').click(function(){
+		$('#accounts').css('display', 'none');
+		$('#comments').css('display', 'none');
+		$('#inventory').css('display', 'inherit');
+		
+		$('#accounts_link').removeClass('active');
+		$('#comments_link').removeClass('active');
+		$('#inventory_link').addClass('active');
+					
 	})
 })
 
