@@ -13,7 +13,7 @@ $(function(){
 			var index = 0;
 			$.each(result.cart, function(i, item) {
 				tbody_dat+='<tr id="'+item.id+'">';
-				tbody_dat+='<td class="odd"><center>1</center></td>';
+				tbody_dat+='<td class="odd"><center><input id="qty" type="number" value="1" size="3"/></center></td>';
 				tbody_dat+='<td class="even"><center>';
 				switch(item.type){
 					case "1":

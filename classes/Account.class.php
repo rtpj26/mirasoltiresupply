@@ -38,5 +38,13 @@ class Account{
 		$pdo_1->execute(array(':deliveryName'=>$deliveryName, ':deliveryAddress'=>$deliveryAddress, ':userid'=>$userid));
 		
 	}
+
+	public static function getAllAccounts(){
+		$pdo_1 = self::$pdo->prepare("SELECT * FROM `users` WHERE USER_TYPE_ID = 2");
+		$pdo_1->execute();
+		$result = $pdo_1->fetchAll(PDO::FETCH_ASSOC);
+		if($result) return $result;
+		else return false;
+	}
 }
 ?>

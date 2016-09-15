@@ -1,0 +1,79 @@
+.transaction-space{
+	background-color: #cc3333;
+	color: #fff;
+	padding:10px;
+}
+
+.transaction-inner{
+	background-color: #cc3333;
+	color: #fff;
+	border-style: solid;
+	border-width:3px;
+	margin:10px;
+	padding:5px 10px 5px 10px;
+}
+
+.small-details{
+	padding:5px 30px 5px 30px;
+}
+
+.th-sm{
+	width:15%;
+}
+
+.th-lg{
+	width:40%;
+}
+
+th, #table_data{
+	text-align: center;
+	
+}
+table{
+	width: 100%;
+}
+
+
+
+th, #table_data, #transaction-note{
+	border-style: solid;
+	border-width: 0px;
+	border-bottom-width: 2px;
+}
+
+#transaction-note{
+	padding-left:20px;
+	padding-right: 20px;
+}
+#grandtotal{
+	float: right;
+}
+
+#smallhr{
+	margin-top: 0px;
+}
+
+.od-column1, .od-column2{
+	border-style: solid;
+	border-width: 0px;
+	border-right-width: 1px;
+}
+
+.other-details-details{
+	padding:10px;
+	min-height:80px;
+}
+
+.od-column1, .od-column2, .od-column3{
+	width:33%;
+	float:left;
+	padding:10px;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}

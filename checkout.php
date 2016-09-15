@@ -230,7 +230,7 @@
 				<div class="collapse-title" data-toggle="collapse" href="#review-div" id="review-title">
 					<span class="glyphicon glyphicon-ok-sign"></span>
 					<span id="sign-in-label">PLACE AND REVIEW ORDERS</span>
-					<span id="collapse-profile">+</span				<input type="text" id="deliveryName" name="deliveryName"/>>
+					<span id="collapse-profile">+</span>			
 				</div>				
 				<div id="review-div" class="collapse">
 					<table class="table">

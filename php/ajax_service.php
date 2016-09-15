@@ -44,6 +44,11 @@
 				}else die(json_encode(array('success'=>false)));
 			}else if($a == 'updateDeliveryDetails'){
 
+			}else if($a == 'logout'){
+				header('location:/mirasoltiresupply/php/logout.php'); 
+			}else if($a == 'getAllAccounts'){
+				$details = Account::getAllAccounts();
+				die(json_encode(array('accounts'=>$details)));
 			}
 		}elseif($t == 'product'){
 			if($a == 'getTires'){
@@ -113,33 +118,50 @@
 			}
 		}elseif($t == 'transaction'){
 			if($a == 'createTransaction'){
-				$transactionId = Transaction::createPurchaseTransaction($_SESSION['users'][0]['USER_ID'], $_POST['mop']);
+				$transactionId = Transaction::createPurchaseTransaction($_SESSION['users'][0]['USER_ID'], $_POST['mop'],$_SESSION['mop_id']);
 				$mopId = $_POST['lastMopId'];
+				$_SESSION['tid'] = $transactionId;
 				$result_bool = true;
 				foreach($_SESSION['cart'] as $purchase_item){
-					$result = Transaction::addTransactionItem($_SESSION['users'][0]['USER_ID'] , $transactionId, $purchase_item['prod_id'], 1, $purchase_item['price']);
+					$result = Transaction::addTransactionItem($_SESSION['users'][0]['USER_ID'] , $transactionId, $purchase_item['prod_id'], 1, $purchase_item['price'], $purchase_item['desc']);
 					if($result) $result_bool &= true;
 					else $result_bool &= false;
 				}
 				unset($_SESSION['cart']);
-				die(json_encode(array('success'=>$result_bool)));
+				die(json_encode(array('success'=>$result_bool, 'tid'=>$transactionId)));
 			}else if($a == 'createCODDetail'){
 
 			}elseif($a == 'createCreditDetail'){
 				$detail_id = Transaction::createCreditDetail($_POST['card_no'], $_POST['card_name'], $_POST['exp_month'], $_POST['exp_year'], $_POST['card_security']);
-				$_SESSION['credit_id'] = $detail_id;
+				$_SESSION['mop_id'] = $detail_id;
 				if($detail_id) die(json_encode(array('success'=>true, 'id'=>$detail_id)));
 				else die(json_encode(array('success'=>false)));
 			}elseif($a == 'createCheckDetail'){
 				$detail_id = Transaction::createCheckDetail($_POST['bank'], $_POST['cnumber'], $_POST['amount']);
-				$_SESSION['credit_id'] = $detail_id;
+				$_SESSION['mop_id'] = $detail_id;
 				if($detail_id) die(json_encode(array('success'=>true, 'id'=>$detail_id)));
 				else die(json_encode(array('success'=>false)));
 				
+			}else if($a == "getInvoice"){
+				$details = Transaction::getTransactionDetails($_SESSION['tid']);
+				die(json_encode(array('details'=>$details)));
 			}
 		}elseif($t == 'comments'){
 			if($a=='addComment'){
 				Contact::addComment($_POST['name'], $_POST['email'], $_POST['msg'], $_POST['pnum']);
+				die(json_encode(array('success'=>true)));
+			}else if($a=='getComments'){
+				$result = Contact::getComments($_POST['keyword']);
+				die(json_encode(array('comments'=>$result)));
+			}else if($a=='getCommentsLike'){
+				$result = Contact::getCommentsLike($_POST['keyword']);
+				die(json_encode(array('comments'=>$result)));
+			}else if($a=='getCommentsId'){
+				$result = Contact::getCommentsId($_POST['keyword']);
+				die(json_encode(array('comments'=>$result)));
+			}
+			else if($a=='updateCommentsStatus'){
+				$result = Contact::updateCommentsStatus($_POST['keyword']);
 				die(json_encode(array('success'=>true)));
 			}
 		}
@@ -147,6 +169,8 @@
 	if($method == "GET"){
 		$a = $_GET['action'];
 		$t = $_GET['type'];
-
+		if($t=="transaction"){
+			
+		}
 	}
 ?>

@@ -17,17 +17,17 @@ class Transaction{
 		}
 	}
 
-	public static function createPurchaseTransaction($user_id, $mop){
-		$pdo_1 = self::$pdo->prepare("INSERT INTO `transaction` VALUES(NULL, :user_id, 1, NOW(), :mop, 1)");
-		$pdo_1->execute(array(':user_id' => $user_id, ':mop' => $mop));
+	public static function createPurchaseTransaction($user_id, $mop, $mop_id){
+		$pdo_1 = self::$pdo->prepare("INSERT INTO `transaction` VALUES(NULL, :user_id, 1, NOW(), :mop, 1, :mop_id)");
+		$pdo_1->execute(array(':user_id' => $user_id, ':mop' => $mop, ':mop_id'=>$mop_id));
 		$lastId = self::$pdo->lastInsertId();
 		if($lastId) return $lastId;
 		else return false;
 	}
 
-	public static function addTransactionItem($user_id, $transaction_id, $purchase, $qty, $total){
-		$pdo_1 = self::$pdo->prepare("INSERT INTO `transaction_detail` VALUES(NULL, :transaction_id, :purchase, :qty, :total)");
-		$pdo_1->execute(array(':transaction_id'=>$transaction_id, 'purchase'=>$purchase, ':qty'=>$qty, ':total'=>$total));
+	public static function addTransactionItem($user_id, $transaction_id, $purchase, $qty, $total, $tdetail){
+		$pdo_1 = self::$pdo->prepare("INSERT INTO `transaction_detail` VALUES(NULL, :transaction_id, :purchase, :qty, :total, :tdetail)");
+		$pdo_1->execute(array(':transaction_id'=>$transaction_id, 'purchase'=>$purchase, ':qty'=>$qty, ':total'=>$total, 'tdetail'=>$tdetail));
 	}
 
 	public static function createCreditDetail($cardno, $name, $expiry_month, $expiry_year, $securityCode){
@@ -44,5 +44,11 @@ class Transaction{
 		return $lastId;
 	}
 	
+	public static function getTransactionDetails($transaction_id){
+		$pdo_1 = self::$pdo->prepare("SELECT * FROM transaction A INNER JOIN transaction_detail B ON A.TRANSACTION_ID = B.TRANSACTION_ID WHERE A.TRANSACTION_ID=:transaction_id");
+		$pdo_1->execute(array(':transaction_id'=>$transaction_id));
+		$result = $pdo_1->fetchAll(PDO::FETCH_ASSOC);
+		return $result;
+	}	
 }
 ?>

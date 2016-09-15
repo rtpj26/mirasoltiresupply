@@ -224,8 +224,9 @@ $(function(){
 					mop: selected_mop,
 					lastMopId: lastMopId
 				},
-				success: function(){
-					alert('Order successfully placed');
+				success: function(result){
+					//alert('Order successfully placed');
+					window.location.replace("/mirasoltiresupply/invoice.php?tid=" + result.tid);
 				},async: false
 			})
 		}

@@ -1,4 +1,5 @@
 $(function(){
+	var ajaxURL = "/mirasoltiresupply/php/ajax_service.php";
 	$('#switch-menu-welcome').mouseenter(function(){
 		$('#switch-menu-welcome').html('<br><br>logout?');
 	});
@@ -9,7 +10,16 @@ $(function(){
 
 	$('#switch-menu-welcome').click(function(){
 		if($('#switch-menu-welcome').text('logout?')){
-			alert('logout -- temporary placeholder');
+			$.ajax({
+				type: 'POST',
+				url: ajaxURL,
+				data:{
+					type: 'account_control',
+					action: 'logout'
+				},success: function(){
+					window.location.replace("/mirasoltiresupply/");
+				}
+			})
 		}
 	});
 
