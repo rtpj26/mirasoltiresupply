@@ -24,21 +24,43 @@
 			<div class="admin-main-content">
 
 				<div id="inventory">
-					<div style="width: 100%;">
+					<div>
 						<h1><strong>INVENTORY <img src="/mirasoltiresupply/assets/inventory.png" height="45px"></strong></h1>
 					</div>
 					<br>
 					<div>
-						<div class="inv-col">
-							TIRES
+						<div class="inv-col" id="tire-link">
+							<center><img src="/mirasoltiresupply/assets/tire.png" width="190px"/><br>
+							<h3>TIRES</h3></center>
 						</div>
-						<div class="inv-col">
-							WHEELS
+						<div class="inv-col" id="wheel-link">
+							<center><img src="/mirasoltiresupply/assets/wheel.png" width="190px"/><br>
+							<h3>WHEELS</h3></center>
 						</div>
-						<div class="inv-col">
-							BATTERIES
+						<div class="inv-col" id="battery-link">
+							<center><img src="/mirasoltiresupply/assets/battery.png" width="190px"/><br>
+							<h3>BATTERIES</h3></center>
 						</div>
 					</div>	
+					<div class="inventory-home-adj">&nbsp</div>
+				</div>
+
+				<div id="tires-panel">
+					<div id="tire-search-bar">
+						<input type="text" class="tire-input" id="tire-keyword" />
+						<button class="tire-search-button">SEARCH</button>
+					</div>
+					<table id="tire-table">
+						<thead>
+							<th>RIM</th>
+							<th>SIZE</th>
+							<th>LI/SS</th>
+							<th>BRAND</th>
+							<th>DESIGN</th>
+						</thead>
+						<tbody id="tbody_tires">
+						</tbody>
+					</table>
 				</div>
 
 				<div id="accounts">

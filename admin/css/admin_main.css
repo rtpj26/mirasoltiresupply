@@ -16,7 +16,7 @@
 
 .admin-left-nav li{
 	text-decoration: none;
-	color:#cc3333;
+	color:#e62324;
 	padding-top:30px;
 	font-size: 170%;
 	list-style: none;
@@ -26,20 +26,20 @@
 .admin-left-nav li:hover{
 	border-width: 0px;
 	border-bottom-width: 5px;
-	border-color: #c33;
+	border-color: #e62324;
 	border-style:solid;
 }
 
 .active{
 	border-width: 0px;
 	border-bottom-width: 5px;
-	border-color: #c33;
+	border-color: #e62324;
 	border-style:solid;
 }
 
 .admin-left-nav a, .admin-left-nav a:hover{
 	text-decoration: none;
-	color:#cc3333;
+	color:#e62324;
 	padding-top:30px;
 	list-style: none;
 }
@@ -54,13 +54,18 @@
 	height:100%;
 	min-height:100%;
 	color: #fff;
-	background-color: #cc3333;
+	background-color: #e62324;
 	padding:20px;
 }
 
-#comments, #accounts{
+#comments, #accounts, #tires-panel{
 	min-height: 445px;
 	max-height: 445px;
+}
+
+#inventory{
+	min-height: 480px;
+	max-height: 480px;	
 }
 
 #comments h1{
@@ -70,21 +75,29 @@
 #inventory h1{
 	font-size:300%;
 	float: right;
+	margin-bottom:30px;
+}
+
+#inventory > div{
+	height:135px;
 }
 
 .inv-col{
-	width:20%;
+	width:33%;
 	float: left;
 }
 #comments h4{
-	color: #cc3333;
+	color: #e62324;
 	background-color: #fff;
 	font-size: 300%;
 	margin-top:-45px;
 
 }
+.inventory-home-adj{
+	height:190px;
+}
 
-#recent_comment,#all_comment, #customer-accounts{
+#recent_comment,#all_comment, #customer-accounts, #tire-table{
 	width: 100%;
 	margin-bottom:20px;
 }
@@ -93,13 +106,17 @@
 	width: 33%;
 }
 
-#recent_comment thead, #all_comment thead, #customer-accounts thead{
+#recent_comment thead, #all_comment thead, #customer-accounts thead, #tire-table thead{
 	border-style: solid;
 	border-color: #fff;
 	border-width: 0px;
 	border-bottom-width: 2px;
 }
 
+#tire-table th, #tire-table td{
+	text-align: center;
+	width: 19%;
+}
 .searchComment{
 	width:80%;
 	color: #c33;
@@ -112,6 +129,25 @@
 	width: 19%;
     padding-top: 2px;
     padding-bottom: 2px;
+}
+
+.tire-input{
+	width:65%;
+	color: #c33;
+
+}
+
+.tire-search-button{
+	background-color: #fff;
+	border-width: 0px;
+	color: #c33;
+	padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#tire-search-bar{
+	float:right;
+	margin-bottom:10px;
 }
 
 #comment_dialog{

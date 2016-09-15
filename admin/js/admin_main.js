@@ -2,6 +2,7 @@ $(function(){
 	var ajaxURL = "/mirasoltiresupply/php/ajax_service.php";
 	$('#accounts').css('display', 'none');
 	$('#inventory').css('display', 'none');
+	$('#tires-panel').css('display', 'none');
 	$.ajax({
 		type: 'POST',
 		url: ajaxURL,
@@ -56,6 +57,27 @@ $(function(){
 				tbody += '</tr>';
 			});
 			$('#tbody_accounts').append(tbody);
+		}, async: false
+	});
+	$.ajax({
+		type: 'POST',
+		url: ajaxURL,
+		data:{
+			type: 'product',
+			action: 'getTires',
+			sortby: ''
+		}, success: function(result){
+			var tbody = '';
+			$.each(result.productDetails, function(i, item) {
+				tbody += '<tr id="' + item.PRODUCT_ID + '">';
+				tbody += '<td>'+ item.TIRE_RIM + '</td>';
+				tbody += '<td>'+item.TIRE_RIM + '</td>';
+				tbody += '<td>'+item.TIRE_SIZE + '</td>';
+				tbody += '<td>'+item.TIRE_BRAND + '</td>';
+				tbody += '<td>'+item.TIRE_DESIGN + '</td>';
+				tbody += '</tr>';
+			});
+			$('#tbody_tires').append(tbody);
 		}, async: false
 	});
 
@@ -147,6 +169,13 @@ $(function(){
 		$('#comments_link').removeClass('active');
 		$('#inventory_link').addClass('active');
 					
+	})
+
+	$('#tire-link').click(function(){
+		$('#accounts').css('display', 'none');
+		$('#comments').css('display', 'none');
+		$('#inventory').css('display', 'none');
+		$('#tires-panel').css('display', 'inherit');
 	})
 })
 
