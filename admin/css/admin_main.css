@@ -4,7 +4,7 @@
 	margin-right:10%;
 	margin-left:10%;
 	width: 80%;
-	margin-top: 5%;
+	margin-top: 1%;
 }
 
 .admin-left-nav{
@@ -16,9 +16,9 @@
 
 .admin-left-nav li{
 	text-decoration: none;
-	color:#e62324;
+	color:#cc3333;
 	padding-top:30px;
-	font-size: 170%;
+	font-size: 130%;
 	list-style: none;
 	cursor: pointer;
 }
@@ -26,20 +26,20 @@
 .admin-left-nav li:hover{
 	border-width: 0px;
 	border-bottom-width: 5px;
-	border-color: #e62324;
+	border-color: #cc3333;
 	border-style:solid;
 }
 
 .active{
 	border-width: 0px;
 	border-bottom-width: 5px;
-	border-color: #e62324;
+	border-color: #cc3333;
 	border-style:solid;
 }
 
 .admin-left-nav a, .admin-left-nav a:hover{
 	text-decoration: none;
-	color:#e62324;
+	color:#cc3333;
 	padding-top:30px;
 	list-style: none;
 }
@@ -54,19 +54,16 @@
 	height:100%;
 	min-height:100%;
 	color: #fff;
-	background-color: #e62324;
+	background-color: #cc3333;
 	padding:20px;
 }
 
-#comments, #accounts, #tires-panel{
-	min-height: 445px;
-	max-height: 445px;
+#comments, #accounts, #tires-panel, #wheels-panel, #batteries-panel, #rescue-panel, #account_details, #admin-main-content, #inventory, #sales, #promo_code, #popanel{
+	min-height: 548px;
+	max-height: 548px;
+	overflow-y: auto;
 }
 
-#inventory{
-	min-height: 480px;
-	max-height: 480px;	
-}
 
 #comments h1{
 	font-size:400%;
@@ -87,7 +84,7 @@
 	float: left;
 }
 #comments h4{
-	color: #e62324;
+	color: #cc3333;
 	background-color: #fff;
 	font-size: 300%;
 	margin-top:-45px;
@@ -97,29 +94,65 @@
 	height:190px;
 }
 
-#recent_comment,#all_comment, #customer-accounts, #tire-table{
+#recent_comment,#all_comment, #customer-accounts, #tire-table, #wheel-table, #batteries-table, #rescue-table, #transaction-table, #sales_table, #promo_code_list,#po_table{
 	width: 100%;
 	margin-bottom:20px;
 }
 
-#recent_comment th, #recent_comment td, #all_comment th, #all_comment td, #customer-accounts th, #customer-accounts td{
+
+#customer-accounts th, #customer-accounts td{
 	width: 33%;
+	text-align: center;
+}
+#recent_comment th, #recent_comment td, #all_comment th, #all_comment td{
+	width: 25%;
+	text-align: center;
 }
 
-#recent_comment thead, #all_comment thead, #customer-accounts thead, #tire-table thead{
+#transaction-accounts th, #transaction-accounts td{
+	width:25%;
+	text-align: center;
+}
+
+#promo_code_list th, #promo_code_list td{
+	width:20%;
+	text-align: center;
+}
+
+#recent_comment thead, #all_comment thead, #customer-accounts thead, #tire-table thead, #wheel-table thead, #batteries-table thead, #rescue-table thead, #transaction-table thead, #sales_table thead, #promo_code_list thead, #po_table thead{
 	border-style: solid;
 	border-color: #fff;
 	border-width: 0px;
 	border-bottom-width: 2px;
 }
 
-#tire-table th, #tire-table td{
+#tire-table th, #tire-table td, #wheel-table th, #wheel-table td, #batteries-table th, #batteries-table td{
 	text-align: center;
 	width: 19%;
+}
+#rescue-table td, #rescue-table th{
+	text-align: center;
+	width: 14%;
+}
+
+.updateRStatus{
+	color:#000;
+}
+#sales_table th, #sales_table td{
+	text-align: center;
+	width: 16%;
+}
+#po_table th, #po_table td{
+	text-align: center;
+	width: 25%;
 }
 .searchComment{
 	width:80%;
 	color: #c33;
+}
+
+.glyphicon-pencil, .glyphicon-trash{
+	cursor: pointer;
 }
 
 #searchButton{
@@ -131,13 +164,13 @@
     padding-bottom: 2px;
 }
 
-.tire-input{
+.tire-input, .wheel-input, .batteries-input{
 	width:65%;
 	color: #c33;
 
 }
 
-.tire-search-button{
+.tire-search-button, .wheel-search-button, .batteries-search-button{
 	background-color: #fff;
 	border-width: 0px;
 	color: #c33;
@@ -145,11 +178,97 @@
     padding-bottom: 2px;
 }
 
-#tire-search-bar{
+#tire-search-bar, #wheel-search-bar, #batteries-search-bar{
 	float:right;
 	margin-bottom:10px;
 }
 
 #comment_dialog{
 	display: hidden;
+}
+
+#address_title, #transaction_title{
+	background-color: #fff;
+	color: #cc3333;
+	width: 100%;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right:5%;
+	text-align: right;
+}
+
+#transaction_title{
+	margin-bottom:20px;
+}
+#address_title > span, #transaction_title > span{
+	
+	font-size: 160%;
+}
+
+.transaction_status{
+	    background-color: #cc3333;
+    border-style: none;
+}
+
+#sales h1{
+	color: #cc3333;
+	background-color: #fff;
+	padding: 20px 10px;
+}
+
+#sales select{
+	padding: 5px 3px;
+    color: #000;
+    text-align: center;
+    margin-top: -15px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    margin-left:10px;
+}
+::-webkit-scrollbar-track {
+    background-color: #eaeaea;
+    border-left: 1px solid #ccc;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
+
+#print, #switch_graph, #switch_table, #add_po a{
+	cursor: pointer;
+}
+
+#print:hover, #switch_graph:hover, #switch_table:hover, ##add_po a:hover{
+	color: #ccc;
+}
+
+.ui-dialog-titlebar, .ui-widget-header{
+	display: none;
+}
+
+.close-diag{
+	position: absolute;
+    bottom: 0px;
+    right: 0px;
+
+    border-style: none;
+    color: #fff;
+    background-color: #cc3333;
+    padding: 10px 50px;
+}
+
+#tire-link, #wheel-link, #battery-link{
+	cursor: pointer;
 }

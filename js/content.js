@@ -1,12 +1,22 @@
 $(function(){
 	$('#home, #about_us').height($(window).height());
-	var ajaxURL = "/mirasoltiresupply/php/ajax_service.php";
+	var ajaxURL = "http://mirasoltiresupply.com/php/ajax_service.php";
 
 	/**************Event Handlers***************/
-	$('#navigation_row').load('/mirasoltiresupply/navigation.php');
-	//$('#footer').load('footer.php');
+	$('#navigation_row').load('http://mirasoltiresupply.com/navigation.php');
+	$('#footer').load('footer.php');
 	checklogin();
 
+    $.ajax({
+        type: 'POST',
+        url: ajaxURL,
+        data:{
+            type: 'session',
+            action: 'countCart'
+        }, success: function(result){
+            $('#cart_count').text(result.qty);
+        }
+    })
 	$(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             $('.scrollup').fadeIn();
@@ -55,7 +65,8 @@ $(function(){
 				if(element['logged_in'] == true){
 					$("#logout").css("display", "block");
 		  			$("#account").text("My Account");
-		  			$('#account').attr("href", "/mirasoltiresupply/account/index.php");
+		  			$('#account').attr("href", "http://mirasoltiresupply.com/account/index.php");
+                   
 				}else{
 					$('#logout').css("display", "none");
 				}

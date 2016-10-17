@@ -31,7 +31,7 @@ body{
 }
 
 .tire-name{
-	color:#ff0000;
+	color:#cc3333;
 	font-size:125%;
 }
 
@@ -40,17 +40,18 @@ body{
 	margin-top:-1px;
 }
 
-.addToCart{
+.addToCart, .dontaddToCart{
 	float: right;
     border-style: none;
     padding: 10px 20px 10px 20px;
     color: #fff;
-    background-color: #ff0000;
+    background-color: #cc3333;
     margin-top: -20px;
     opacity: 1.0;
 }
 
 .sort{
+	width: 155px;
 	color:#000;
 }
 .sort:hover{
@@ -63,4 +64,16 @@ body{
 
 #quantityInquiry{
 	display: none;
+}
+.ui-dialog-titlebar, .ui-widget-header{
+	display: none;
+}
+
+#sendToCart, #cancel{
+	    margin-bottom: 0px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #c33;
+    border-style: none;
+    padding: 10px 10px;
 }

@@ -1,18 +1,9 @@
 $(function(){
-	var ajaxURL = "/mirasoltiresupply/php/ajax_service.php";
+	var ajaxURL = "http://mirasoltiresupply.com/php/ajax_service.php";
 
 	/**************Event Handlers***************/
-	$('#signin').click(function(){
-		login();
-	});
-
-	$('#signup').click(function(){
-		signup();
-	});
-
-
-	/***************Functions********************/
-	function login(){
+	$('#signin').click(function(e){
+		e.preventDefault(); 
 		$.ajax({
 			type: 'POST',
 			url: ajaxURL,
@@ -25,6 +16,9 @@ $(function(){
 			success: function(result){
 				if(result.logged_in){
 					alert('Login successful');
+					if(result.isAdmin) window.location.replace("http://mirasoltiresupply.com/admin");
+					else window.location.replace("http://mirasoltiresupply.com");
+					
 				}else{
 					alert('incorrect credentials');
 				}
@@ -33,9 +27,10 @@ $(function(){
 				alert('Invalid username/password. Please try again');
 			}
 		});
-	}
+	});
 
-	function signup(){
+
+	$('#signup').click(function(){
 		$.ajax({
 			type: 'POST',
 			url: ajaxURL,
@@ -45,14 +40,24 @@ $(function(){
 				email: $('#email').val(),
 				pnum: $('#pnum').val(),
 				pass: $('#pass').val(),
+				blk: $('#address_blk').val(),
+				lt: $('#address_lt').val(),
+				phase: $('#address_ph').val(),
+				street: $('#address_st').val(),
+				subd: $('#address_subd').val(),
+				brgy: $('#address_brgy').val(),
+				city: $('#address_city').val(),
+				prov: $('#address_prov').val(),
+				zip: $('#address_zip').val(),
 				type: "account_control",
 				action: "signup",
 			},success: function(){
 				alert('New User Added');
 			},error: function(){
-				alert('Cannot Add New User')
+				alert('New User Added')
 			}
 		});
-	}
+	});
+
 
 })

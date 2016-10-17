@@ -5,12 +5,16 @@
    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<?php require('required/mtsRequired.php'); ?>
-		<link rel="stylesheet" type="text/css" href="/mirasoltiresupply/css/mycart.css">
-		<script language="javascript" type="text/javascript" src="/mirasoltiresupply/js/mycart.js"></script>
+		<link rel="stylesheet" type="text/css" href="http://mirasoltiresupply.com/css/mycart.css">
+		<script language="javascript" type="text/javascript" src="http://mirasoltiresupply.com/js/mycart.js"></script>
+		<?php 	if(isset($_SESSION['users'][0]['USER_ID']))
+					if($_SESSION['users'][0]['USER_TYPE_ID'] == 0 || $_SESSION['users'][0]['USER_TYPE_ID'] == 1) 
+						header('location:http://mirasoltiresupply.com/admin'); 
+		?>
 	</head>
 	<body>
 		<div id="navigation_row"></div>
-		<div class="logo"><img src="/mirasoltiresupply/assets/logo_altered.png" width="150px;"/></div>
+		<div class="logo"><img src="http://mirasoltiresupply.com/assets/logo_altered.png" width="150px;"/></div>
 		<div></div>
 		<div class="page-wrap container"  id="mycart"></div>
 			<div>
@@ -20,6 +24,7 @@
 				</div>
 				<div class="custom-hr">&nbsp</div>
 				<center>
+				<div style="overflow:auto; max-height:400px;">
 				<table class="table">
 					<thead>
 						<th><center>Qty.</center></th>
@@ -36,9 +41,11 @@
 						<td style="background-color: #000;"></td>
 					</tr>
 				</table>
-
+			</div>
 			</center>
-			<a href="checkout.php" style="color:#fff; text-decoration: none;"><button id="order">ORDER!</order></a>
+			<button id="wishlist" type="button" style="color:#fff; text-decoration: none;">ADD TO WISHLIST</button>
+			
+			<button id="order" style="color:#fff; text-decoration: none;">ORDER!</button>
 			</div>
 		
 		<!--<div id="footer" class="site-footer"></div>-->

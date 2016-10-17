@@ -1,0 +1,49 @@
+button{
+    background-color: #c33;
+    border-style: none;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.admin-wrapper{
+	margin-right: 10%;
+	margin-left: 10%;
+	width: 80%;
+}
+
+#type-navigation{
+	background-color: #c33;
+}
+
+#type-navigation li{
+	list-style: none;
+	display: inline;
+	margin-right:10%;
+	color: #fff;
+	cursor: pointer;
+}
+
+#type-navigation li:hover{
+	color: #ccc;
+}
+
+#type-navigation ul{
+	padding: 5px 10px 5px 10px;
+}
+
+#item_table, #item_enum_table{
+	width:100%;
+}
+
+#item_table th, #item_table td{
+	width: 20%;
+	padding: 5px 10px;
+}
+
+#item_enum_table td{
+	padding: 5px 5px;
+}
+
+.ui-dialog-titlebar, .ui-widget-header{
+	display: none;
+}

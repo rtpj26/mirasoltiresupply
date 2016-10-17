@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<div id="navigation_row"></div>
-		<div class="logo"><img src="/mirasoltiresupply/assets/logo_altered.png" /></div>
+		<div class="logo"><img src=" /home/mirasolt/public_html/assets/logo_altered.png" /></div>
 		<div id="batteries"></div>
 		<div class="page-wrap container"  id="prod-batt">
 			<div>

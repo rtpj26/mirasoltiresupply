@@ -4,17 +4,39 @@
 		<meta charset="utf-8">
    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<?php require('required/mtsRequired.php'); ?>
+		<?php require('required/mtsRequired.php');?>
+		<?php 	if(isset($_SESSION['users'][0]['USER_ID']))
+					if($_SESSION['users'][0]['USER_TYPE_ID'] == 0 || $_SESSION['users'][0]['USER_TYPE_ID'] == 1) 
+						header('location: ./admin'); 
+		?>
 	</head>
 	<body>
+		<script>
+		var ajaxURL = "http://mirasoltiresupply.com/php/ajax_service.php";
+		$.ajax({
+				type: 'POST',
+				url: ajaxURL,
+				data:{
+					type: 'account_control',
+					action: 'checkSessionLoggedIn'
+				}, success: function(result){
+					if(result.isAdmin){
+						window.location.replace("http://mirasoltiresupply.com/admin/");
+					}
+				}, async: false
+			})
+		</script>
 		<div class="page-wrap">
 			<div id="home">
 				<div id="navigation_row"></div>
-				<p class="sdlink text-center container" id="au_link">
-					<a href="#about_us">ABOUT US<br>
-						<span class="glyphicon glyphicon-menu-down"></span>
-					</a>
-				</p>
+				<div class="md20">
+					<p class="sdlink text-center" id="cu_link" style="position:absolute; bottom: 0px;left:48%">
+						<a href="#about_us">
+							ABOUT US<br>
+							<span class="glyphicon glyphicon-menu-down"></span>
+						</a>
+					</p>
+				</div>
 			</div>
 
 			<div id="about_us">
@@ -40,7 +62,7 @@
 					</p>
 				</div>
 				<div class="md20">
-					<p class="sdlink text-center" id="cu_link">
+					<p class="sdlink text-center" id="cu_link" >
 						<a href="#contact_us">
 							Contact Us<br>
 							<span class="glyphicon glyphicon-menu-down"></span>
@@ -108,14 +130,14 @@
 						</p>
 					</div>
 					<div class="col-md-4">
-						<img src="/mirasoltiresupply/assets/54LOCATION.jpg" width="500px"/><br><br>
-						<img src="/mirasoltiresupply/assets/map.jpg" width="500px"/>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3920.846205188782!2d122.94595781422517!3d10.669043192394442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33aed1b3cb2e2fe7%3A0x4c3ca735458a4310!2sMirasol+Tire+Supply!5e0!3m2!1sen!2sph!4v1475222494927" width="500" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+
 					</div><br><br>
 					<div class="col-md-3"></div>
 				</div>
 			</div>
 		</div>
-		<img src="/mirasoltiresupply/assets/back-top.png" class="scrollup" />
+		<img src="./assets/back-top.png" class="scrollup" />
 		<div id="footer"></div>
 	</body>
 	<style> 

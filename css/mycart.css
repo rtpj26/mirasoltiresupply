@@ -64,17 +64,20 @@ table thead th{
 }
 
 
-#order{
+#order, #wishlist{
 	color: #fff;
-	background-color:#f00;
+	background-color:#cc3333;
 	padding:5px;
 	padding-left:60px;
 	padding-right: 60px;
 	border-width: 0px;
 	float: right;
-	margin-right:135px;
+	margin-right: 20px;
 }
 
+#wishlist{
+	margin-right:135px;
+}
 .delete{
 	cursor: pointer;
 }

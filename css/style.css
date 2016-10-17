@@ -15,7 +15,7 @@ html, body {
 /*Classes*/
 .page-wrap {
 	min-height: 100%;
-	margin-bottom: -65px;
+	margin-bottom: -70px;
 }
 
 .page-wrap:after {
@@ -178,7 +178,7 @@ html, body {
 .box{
 	border-style:solid;
 	border-width:1px; 
-	border-color: #ff0000;
+	border-color: #cc3333;
 	padding:10px;
 	width:209px; 
 	margin-left: 40%;
@@ -194,7 +194,7 @@ html, body {
 	border-width:0px; 
 	border-top-width:1px; 
 	border-bottom-width:1px; 
-	border-color: #ff0000;
+	border-color: #cc3333;
 	padding:5px;
 }
 
@@ -202,12 +202,12 @@ html, body {
 	border-style: solid; 
 	border-width:0px; 
 	border-bottom-width:1px; 
-	border-color: #ff0000;
+	border-color: #cc3333;
 	padding:5px;
 }
 
 .checkout-data{
-	color:#ff0000;
+	color:#cc3333;
 	margin-right:50px;
 }
 
@@ -219,12 +219,15 @@ html, body {
 	padding-left: 40px; 
 	padding-right: 40px; 
 	margin:5px;
+	margin-left:40%;
 }
 
 /*ids*/
 #home{
-	background-image: url('../assets/4acctabloggein_599p.jpg');
+	background-image: url('http://mirasoltiresupply.com/assets/4acctabloggein_599p.jpg');
 	height:635px;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #au_link{
@@ -234,11 +237,13 @@ html, body {
 }
 
 #about_us{
-	background-image: url('/mirasoltiresupply/assets/bg_rnr.png');
+	background-image: url('http://mirasoltiresupply.com/assets/bg_rnr.png');
 	width:100%;
 	height:100%;
 	margin-top: -20px;
 	color:#fff;
+	background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #nr_link_u{
@@ -267,15 +272,17 @@ html, body {
 }
 
 #contact_us{
-	background-image: url('/mirasoltiresupply/assets/cu_1.jpg');
+	background-image: url('http://mirasoltiresupply.com/assets/cu_1.jpg');
 	width:100%;
 	height:100%;
 	padding-top:-20px;
 	margin-top: -20px;
+	background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #cu_link{
-	margin-top:30px;
+	margin-top:-10px;
 }
 
 #contact_us_content{
@@ -321,7 +328,7 @@ html, body {
 	background-color: #000;
 	color: #fff;
 	width:366.27px; 
-	height:504.23px;
+	height:635px;
 }
 
 #sign_up{
@@ -335,12 +342,11 @@ html, body {
 }
 
 #footer{
-	position: fixed; 
-	bottom:0px; 
-	left:0px; 
-	display:inline;
+	margin-top:-5px;
+	display:block;
 	width:100%;
 	margin-top:70px;
+	margin-bottom:-10px;
 }
 
 #footer li{
@@ -350,8 +356,9 @@ html, body {
 }
 
 #batteries{
-	background-image: url('/mirasoltiresupply/assets/bat29soo99.jpg'); 
-	background-repeat: no-repeat; 
+	background-image: url('http://mirasoltiresupply.com/assets/bat29soo99.jpg'); 
+	background-repeat: no-repeat;
+  	background-size: cover;
 	position: absolute; 
 	top:0px; 
 	bottom:0px; 
@@ -443,8 +450,9 @@ html, body {
 }
 
 #tires{
-	background-image: url('/mirasoltiresupply/assets/tir10o83r8s.jpg'); 
-	background-repeat: no-repeat; 
+	background-image: url('http://mirasoltiresupply.com/assets/tir10o83r8s.jpg'); 
+	background-repeat: no-repeat;
+  background-size: cover;
 	position: absolute; 
 	top:0px; 
 	bottom:0px; 
@@ -455,8 +463,9 @@ html, body {
 }
 
 #mycart{
-	background-image: url('../assets/cart_bg.png');
-	background-repeat: no-repeat; 
+	background-image: url('http://mirasoltiresupply.com/assets/cart_bg.png');
+	background-repeat: no-repeat;
+  background-size: cover;
 	position: absolute; 
 	top:0px; 
 	bottom:0px; 
@@ -467,8 +476,9 @@ html, body {
 }
 
 #wheels{
-	background-image: url('/mirasoltiresupply/assets/whe219dah.jpg'); 
-	background-repeat: no-repeat; 
+	background-image: url('http://mirasoltiresupply.com/assets/whe219dah.jpg'); 
+	background-repeat: no-repeat;
+  background-size: cover;
 	position: absolute; 
 	top:0px; 
 	bottom:0px; 
@@ -526,3 +536,62 @@ html, body {
     margin: 0;
     z-index: 999;
 }
+
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000
+}
+
+#preloader #preloader-inner {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #3498db;
+  animation: spin 2s linear infinite
+}
+
+#preloader #preloader-inner:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #e74c3c;
+  animation: spin 3s linear infinite
+}
+
+#preloader #preloader-inner:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #f9c922;
+  animation: spin 1.5s linear infinite
+}
+
+@keyframes 
+spin { 0% {
+transform:rotate(0deg)
+}
+
+to { transform: rotate(1turn) }
+}
+

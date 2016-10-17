@@ -34,6 +34,13 @@ class Contact{
 		return $result;
 	}
 
+	public static function countUnread(){
+		$pdo_1 = self::$pdo->prepare("SELECT *  FROM `comment` WHERE COMMENT_STATUS =1");
+		$pdo_1->execute();
+		$result = $pdo_1->fetchAll(PDO::FETCH_ASSOC);
+		return count($result);
+	}
+
 	public static function getCommentsId($status){
 		$pdo_1 = self::$pdo->prepare("SELECT * FROM `comment` WHERE COMMENT_ID IN(:status)");
 		$pdo_1->execute(array(':status'=>$status));
@@ -41,8 +48,8 @@ class Contact{
 		return $result;
 	}
 
-	public static function updateCommentsStatus($id){
-		$pdo_1 = self::$pdo->prepare("UPDATE `comment` SET COMMENT_STATUS = 2 WHERE COMMENT_ID = :id");
+	public static function updateCommentsStatus(){
+		$pdo_1 = self::$pdo->prepare("UPDATE `comment` SET COMMENT_STATUS = 2");
 		$pdo_1->execute(array(':id'=>$id));
 		return;
 	}
@@ -55,6 +62,12 @@ class Contact{
 		return $result;
 	}
 
-
+	public static function deleteComment($id){
+		$sql = "DELETE FROM `comment` WHERE COMMENT_ID = " . $id;
+		$pdo_1 = self::$pdo->prepare($sql);
+		$result = $pdo_1->execute();
+		
+		return $result;	
+	}
 }
 ?>

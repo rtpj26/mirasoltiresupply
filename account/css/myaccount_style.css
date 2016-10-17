@@ -1,9 +1,9 @@
 #myaccount-sidebar{
-	background-color: #ff0000;
+	background-color: #cc3333;
 	color: #fff;
 	font-size:150%;
-	height: 1366px;
 	width:20%;
+	height:600px;
 	float: left;
 }
 
@@ -14,6 +14,7 @@
 	padding-top:10px;
 	padding-bottom:10px;
 	padding-right:5px;
+
 }
 
 
@@ -35,12 +36,14 @@
 	background-color: #fff;
 	float: left;
 	width:1000px;
+	height:600px;
+	overflow: auto;
 }
 
 #navigation_row{
 	margin-right:40px; 
 	float:right; 
-	color: #cc0033;
+	color: #cc3333;
 }
 
 #myaccount-body-content{
@@ -64,10 +67,43 @@
 	margin-top:10px;
 }
 
+.inv_point{
+	cursor: pointer;
+}
+
 .link a{
-	color:#ff0000;
+	color:#cc3333;
 }
 
 .sublink{
 	color: #000;
+}
+
+#transaction-table, #wishlist-table{
+	width: 100%;
+}
+
+#transaction-table th, #transaction-table td{
+	width: 20%;
+}
+
+#wishlist-table-table th, #wishlist-table-table td{
+	width: 30%;
+}
+
+.ebutton-save, .ebutton-cancel{
+	margin-top: 20px;
+    padding: 10px 42px;
+    border-style: none;
+    color: #fff;
+    background-color: #cc3333;
+}
+
+.ui-dialog-titlebar, .ui-widget-header{
+	display: none;
+}
+
+#e-account-gender{
+	color: #cc3333;
+    padding: 3px;
 }

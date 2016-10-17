@@ -9,7 +9,7 @@
 }
 
 .custom-input-checkout{
-	color: #ff0000;
+	color: #cc3333;
 	text-align: left;
 	border-width: 0px;
 	border-style: none;	
@@ -57,7 +57,7 @@ table thead th{
 
 #order{
 	color: #fff;
-	background-color:#f00;
+	background-color:#cc3333;
 	padding:5px;
 	padding-left:60px;
 	padding-right: 60px;
@@ -67,7 +67,7 @@ table thead th{
 #payment-method-selection{
 	background-color: #000;
 	color: #FFF;
-
+	width:1050px;
 	padding-top:15px;
 	padding-bottom:15px
 }
@@ -84,8 +84,8 @@ table thead th{
 	border-width: 0px;
 	border-top-width: 2px;
 	border-bottom-width: 2px;
-	border-color: #f00;
-	border-top-color: #f00;
+	border-color: #cc3333;
+	border-top-color: #cc3333;
 	width: 260px;
 }
 
@@ -100,8 +100,8 @@ table thead th{
 	border-width: 0px;
 	border-top-width: 2px;
 	border-bottom-width: 2px;
-	border-color: #f00;
-	width: 65px;
+	border-color: #cc3333;
+	width: 100px;
 	text-align: center;
 }
 
@@ -111,6 +111,7 @@ table thead th{
 
 #selected-mop{
 	margin-bottom:20px;
+	width:1050px;
 }
 
 #mop-cc-save, #mop-cod-save, #mop-c-save{
@@ -125,14 +126,17 @@ table thead th{
 }
 
 .cod-step1{
- 	color: #ff0000;
+ 	color: #cc3333;
     width: 285px;
     margin-left: 195px;
     font-weight: 400;
 }
 
+#review-div{
+	width:1050px;
+}
 .cod-step2{
-	color: #ff0000;
+	color: #cc3333;
     width: 285px;
     margin-left: 95px;
     font-weight: 400;
@@ -186,4 +190,33 @@ table thead th{
 	display: none;
 	padding: 10px 20px 10px 20px;
 
+}
+
+#dinfo-wrap{
+	margin-left:10%;
+	margin-right:10%;
+}
+.dinfo-label{
+	min-width:20%;
+	width:30%;
+}
+
+.dinfo-input{
+	min-width:100%;
+}
+
+#account-info-r{
+	width: 50%;
+}
+
+#r-details{
+	width:75%;
+}
+
+#account-info-r .label-r{
+	width:30%;
+}
+
+#account-info-r .value-r{
+	width:70%;
 }

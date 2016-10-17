@@ -12,51 +12,108 @@
 		<div class="page-wrap container"  id="prod-batt">
 			<div class="menu-container">
 				<div class="row menu-top-margin-10">
-					<div class="col-md-6">
+					<h1 style="position: absolute; left:5%; top:2%;"><strong>WELCOME BACK <span id="admintype">ADMIN</span></strong></h1>
+					<div id="account-link" class="col-md-6">
+						<a href="admin.php?link=account">
 						<div class="menu-box-1" style="background-color:#666">
 							<center>
 								<br>
 								<img class="menu-box-img" src="../assets/accounts.png" /><br>
 								<label>accounts</label><br><br>
-								<div width="180px" height="60px" style="background-color:#cc3333; margin-top:-20px;">&nbsp</div>
+								<div width="180px" height="60px" class="amarker" style="background-color:#cc3333; margin-top:-20px;">&nbsp</div>
 							</center>
 						</div>
+						</a>
 					</div>
-					<div class="col-md-6">
+					<div id="inventory-link" class="col-md-6">
+						<a href="admin.php?link=inventory">
 						<div class="menu-box-1 " style="background-color: #999">
 							<center><br>
 								<img class="menu-box-img" src="../assets/inventory.png" /><br>
 								<label>inventory</label><br><br>
+								<div width="180px" height="60px" class="imarker" style="background-color:#cc3333; margin-top:-20px;">&nbsp</div>
+							</center>
+						</div>
+						</a>
+					</div>
+				</div>
+
+				<div class="row menu-top-margin-10">
+					<div id="rescue-link" class="col-md-6">
+						<a href="admin.php?link=rescue">
+						<div class="menu-box-1 rescue-block" style="background-color:#999">
+							<center>
+								<br>
+								<img class="menu-box-img" src="../assets/rescue.png" /><br>
+								<label>rescue</label><br>
+								<div width="180px" height="60px" class="rmarker" style="background-color:#cc3333; margin-top:0px;">&nbsp</div>
+							</center>
+						</div>
+						</a>
+					</div>
+					<div id="comment-link" class="col-md-6">
+						<a href="admin.php?link=comments">
+						<div class="menu-box-1 " style="background-color: #666">
+							<center><br>
+								<img class="menu-box-img" src="../assets/comments.png" /><span class="unread_count" id="unread">0</span><br>
+								<label>comments</label><br><br>
+								<div width="180px" height="60px" class="cmarker" style="background-color:#cc3333; margin-top:-20px;">&nbsp</div>
+							</center>
+						</div>
+					</a>
+					</div>
+				</div>
+
+				<div class="row menu-top-margin-10">
+					<div id="pcode-link" class="col-md-6">
+						<a href="admin.php?link=pcode">
+						<div class="menu-box-1" style="background-color:#666">
+							<center>
+								<br>
+								<img class="menu-box-img" src="../assets/promocode.png" height="110px"/><br>
+								<label>promo code</label><br>
+								<div width="180px" height="60px" class="pmarker" style="background-color:#cc3333; margin-top:0px;">&nbsp</div>
+							</center>
+						</div>
+						</a>
+					</div>
+					<div id="po-link" class="col-md-6">
+						<a href="admin.php?link=po">
+						<div class="menu-box-1 " style="background-color: #999">
+							<center><br>
+								<img class="menu-box-img" src="../assets/purchase_order.png" height="110px"/><br>
+								<label>purchase order</label><br><br>
+								<div width="180px" height="60px" class="pomarker" style="background-color:#cc3333; margin-top:-20px;">&nbsp</div>
+							</center>
+						</div>
+					</a>
+					</div>
+				</div>
+
+
+				<div class="row menu-top-margin-10">
+					<div id="sales-link" class="col-md-6">
+						<a href="admin.php?link=sales">
+						<div class="menu-box-1" style="background-color: #999">
+							<center>
+								<br>
+								<img class="menu-box-img" src="../assets/sales.png" height="100px"/><br>
+								<label>Sales</label><br>
+								<div width="180px" height="60px" class="smarker" style="background-color:#cc3333; margin-top:10px;">&nbsp</div>
+							</center>
+						</div>
+						</a>
+					</div>
+					<div id="switch-menu-welcome" class="col-md-6 menu3">
+						<div style="background-color: #c33"  >
+							<center>
+								<p><br>welcome<br>back<br></p>
 							</center>
 						</div>
 					</div>
 				</div>
 
-				<div class="row menu-top-margin-10">
-					<div class="col-md-6">
-						<div class="menu-box-1" style="background-color:#999">
-							<center>
-								<br>
-								<img class="menu-box-img" src="../assets/rescue.png" /><br>
-								<label>rescue</label><br>
-							
-							</center>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="menu-box-1 " style="background-color: #666">
-							<center><br>
-								<img class="menu-box-img" src="../assets/comments.png" /><span class="unread_count">1</span><br>
-								<label>comments</label><br><br>
-							</center>
-						</div>
-					</div>
-				</div>
-				<div class="row menu-top-margin-10 menu3" id="switch-menu-welcome">
-					<div class="col-md-12" >
-						<p><br>welcome<br>back<br>admin<br></p>
-					</div>
-				</div>
+
 			</div>
 		</div>
 		<!--<div id="footer" class="site-footer"></div>-->

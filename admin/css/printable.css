@@ -1,0 +1,36 @@
+#sales{
+	margin-left:10%;
+	margin-right:10%;
+	margin-top:2%;
+}
+
+#sales_table{
+	width: 100%;
+}
+
+#sales_table th, #sales_table td{
+	width:16%;
+}
+
+#sales_table thead{
+	border-style: solid;
+	border-width: 0px;
+	border-bottom-width: 2px;
+}
+
+#dimmer{
+	position: absolute;
+	overflow: hidden;
+	background-color: #fff;
+	min-height: 100%;
+	min-width: 100%;
+	top:0px;
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}

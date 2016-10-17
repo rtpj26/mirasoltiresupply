@@ -4,14 +4,21 @@
 		<meta charset="utf-8">
    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<?php require('required/mtsRequired.php'); ?>
-		<?php 	if(isset($_SESSION['users'][0]['USER_ID']))
-					if($_SESSION['users'][0]['USER_ID'] > 0 && $_SESSION['users'][0]['USER_TYPE_ID'] == 2) 
-						header('location:/mirasoltiresupply'); 
-					else
-						header('location:/mirasoltiresupply/admin'); 
+		<?php 	
+
+				if(isset($_SESSION['users'][0]['USER_ID'])){
+					if($_SESSION['users'][0]['USER_ID'] > 0 && $_SESSION['users'][0]['USER_TYPE_ID'] == 2){
+						header('location:http://mirasoltiresupply.com'); 
+					}
+					else{
+						//header("Location: http://".$_SERVER['HTTP_HOST']."/admin", true, 302);
+						header('location:http://mirasoltiresupply.com/admin'); 
+					}
+				}
 		?>
-		<script language="javascript" type="text/javascript" src="/mirasoltiresupply/js/reg_js.js"></script>
+		<?php require('required/mtsRequired.php'); ?>
+		
+		<script language="javascript" type="text/javascript" src="http://mirasoltiresupply.com/js/reg_js.js"></script>
 	</head>
 	<body>
 		<div id="navigation_row"></div>
@@ -27,6 +34,18 @@
 							<input class="custom_input_2" type="text" placeholder="LAST NAME" size="40" name="lname" id="lname" required/><br>
 							<input class="custom_input_2" type="email" placeholder="EMAIL" size="40" name="email" id="email"required/><br>
 							<input class="custom_input_2" type="text" placeholder="PHONE NUMBER"  size="40" name="pnum" id="pnum" required/><br>
+
+							<input class="custom_input_2" type="text" placeholder="BLK."  size="5" name="address" id="address_blk"/>
+							<input class="custom_input_2" type="text" placeholder="LT."  size="5" name="address" id="address_lt"/>
+							<input class="custom_input_2" type="text" placeholder="PHASE"  size="14" name="address" id="address_ph"/><br>
+							<input class="custom_input_2" type="text" placeholder="ST."  size="10" name="address" id="address_st"/>
+							<input class="custom_input_2" type="text" placeholder="SUBD."  size="22" name="address" id="address_subd"/><br>
+							<input class="custom_input_2" type="text" placeholder="BRGY."  size="40" name="address" id="address_brgy"/><br>
+							<input class="custom_input_2" type="text" placeholder="CITY"  size="40" name="address" id="address_city" required/><br>
+							<input class="custom_input_2" type="text" placeholder="PROVINCE"  size="40" name="address" id="address_prov"/><br>
+							<input class="custom_input_2" type="text" placeholder="ZIP"  size="40" name="address" id="address_zip"/><br>
+							
+
 							<input class="custom_input_2" type="password" placeholder="PASSWORD" size="40" vname="pass" id="pass" required/><br>
 							<input class="custom_input_2" type="password" placeholder="VERIFY PASSWORD" size="40" name="vpass" id="vpass" required/><br><br>
 							<button type="button" class="reg_button" id="signup">Sign up!</button>

@@ -24,3 +24,50 @@ body{
 	background-color: #fff;
 	padding: 5px;
 }
+
+.addToCart{
+	border-style: none;
+    padding: 10px 10px 10px 10px;
+    color: #fff;
+    background-color: #cc3333;
+}
+
+.dontaddToCart{
+	border-style: none;
+    padding: 10px 6px 10px 6px;
+    color: #fff;
+    background-color: #cccccc;
+}
+
+
+.global-field{
+	font-weight: 600;
+}
+
+#quantityInquiry{
+	display: none;
+}
+.ui-dialog-titlebar, .ui-widget-header{
+	display: none;
+}
+
+#sendToCart, #cancel{
+	    margin-bottom: 0px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #c33;
+    border-style: none;
+    padding: 10px 10px;
+}
+
+.qtyRemaining{
+	font-size: 12px;
+}
+
+
+.sort{
+	width: 135px;
+	color:#000;
+
+	margin-left: -20px; 
+}

@@ -29,9 +29,9 @@
 	}
 
 	$host 	= "localhost";
-	$user 	= "root";
-	$pass  	= "";
-	$db 	= "mirasoltiresupply";
+	$user 	= "mirasolt_nash";
+	$pass  	= "Hello1976";
+	$db 	= "mirasolt_mirasoltiresupply";
 
 	$db_obj = new database_object($host, $db, $user, $pass);
 	if (!$db_obj->isConnected()) {

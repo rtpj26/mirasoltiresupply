@@ -10,7 +10,7 @@ body{
 	color: #000;
 }
 
-#batt-enum{
+#batt_enum{
 	float:left; 
 	width:78%; 
 	max-height: 400px; 
@@ -18,4 +18,49 @@ body{
 	margin-left: 10px;
 	overflow: auto;
 	overflow-x: hidden;
+}
+
+
+.addToCart{
+	border-style: none;
+    padding: 10px 10px 10px 10px;
+    color: #fff;
+    background-color: #cc3333;
+}
+
+.dontaddToCart{
+	border-style: none;
+    padding: 10px 6px 10px 6px;
+    color: #fff;
+    background-color: #cccccc;
+}
+
+
+.global-field{
+	font-weight: 600;
+}
+
+#quantityInquiry{
+	display: none;
+}
+.ui-dialog-titlebar, .ui-widget-header{
+	display: none;
+}
+
+#sendToCart, #cancel{
+	    margin-bottom: 0px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #c33;
+    border-style: none;
+    padding: 10px 10px;
+}
+
+
+
+.sort{
+	width: 135px;
+	color:#000;
+
+	margin-left: -20px; 
 }
